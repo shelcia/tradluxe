@@ -38,7 +38,7 @@ export const success = {
   main: "#2CC5BD",
 };
 export const warning = {
-  main: "#FFE91F",
+  main: "#FFE24A",
   dark: "#FFD600",
 };
 export const info = {

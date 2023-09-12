@@ -7,6 +7,7 @@ import {
   StyledEngineProvider,
   ThemeProvider,
 } from "@mui/material";
+import "./styles/style.css";
 
 const App = () => {
   const allPages = useRoutes(routes);

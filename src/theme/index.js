@@ -55,8 +55,34 @@ const baseOptions = {
             boxShadow: "none",
           },
         },
+        containedWarning: {
+          backgroundColor: warning.main,
+          color: "#000",
+          fontSize: "0.8125rem",
+          fontWeight: 700,
+          letterSpacing: "0.00938rem",
+          lineHeight: "130%",
+          textTransform: "uppercase",
+          padding: "0.62rem 1.5rem",
+          borderRadius: "50ex",
+        },
         containedError: {
           color: "white",
+        },
+        outlinedWarning: {
+          borderColor: warning.main,
+          color: "#000",
+          fontSize: "0.8125rem",
+          fontWeight: 700,
+          letterSpacing: "0.00938rem",
+          lineHeight: "130%",
+          textTransform: "uppercase",
+          padding: "0.62rem 1.5rem",
+          borderRadius: "50ex",
+        },
+        textWarning: {
+          color: "#000",
+          borderRadius: "50ex",
         },
         outlinedSuccess: {
           color: success,
@@ -235,7 +261,7 @@ const baseOptions = {
     MuiButtonBase: {
       styleOverrides: {
         root: {
-          fontFamily: "'Open Sans Variable', sans-serif",
+          fontFamily: "'Figtree', sans-serif",
         },
       },
     },
@@ -259,7 +285,7 @@ const baseOptions = {
     button: {
       fontWeight: 600,
     },
-    fontFamily: "'Open Sans Variable', sans-serif",
+    fontFamily: "'Figtree', sans-serif",
     h1: {
       fontWeight: 800,
       fontSize: "4.25rem",

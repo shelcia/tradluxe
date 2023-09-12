@@ -8,27 +8,24 @@ body {
 .parallax {
   /* The image used */
   background-image: url("../assets/alex-haney-CAhjZmVk5H4-unsplash.jpg");
-
   /* Set a specific height */
   min-height: 500px;
-
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  //   top: calc(48px + 56px);
   display: flex;
   align-items: center;
-
-  &--text-container {
-    background-color: rgba(255, 255, 255, 0.25);
-    backdrop-filter: saturate(100%) blur(5px);
-    min-height: 500px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
+}
+.parallax--text-container {
+  background-color: rgba(255, 255, 255, 0.25);
+  -webkit-backdrop-filter: saturate(100%) blur(5px);
+          backdrop-filter: saturate(100%) blur(5px);
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .brand-container {
@@ -43,10 +40,9 @@ body {
   align-items: center;
 }
 
-// navlinks which are active
 .active {
   text-decoration: underline;
-  button {
-    text-decoration: underline;
-  }
 }
+.active button {
+  text-decoration: underline;
+}/*# sourceMappingURL=style.css.map */
