@@ -48,9 +48,11 @@ const Layout = () => {
 
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
-      <Typography variant="h6" sx={{ my: 2 }}>
-        <img src={Logo} alt="" height={48} />
-      </Typography>
+      <Link to="/">
+        <Typography variant="h6" sx={{ my: 2 }}>
+          <img src={Logo} alt="Tradluxe Logo" height={48} />
+        </Typography>
+      </Link>
       <Divider />
       <List>
         {navItems.map((item) => (
@@ -107,13 +109,15 @@ const Layout = () => {
       <Box>
         <AppBar component="nav" sx={{ position: "relative" }}>
           <Toolbar sx={{ justifyContent: "space-between", flex: "1 1 1" }}>
-            <Box
-              sx={{
-                width: { sm: 132, xs: 48 },
-              }}
-            >
-              <img src={Logo} alt="" height={48} />
-            </Box>
+            <Link to="/">
+              <Box
+                sx={{
+                  width: { sm: 132, xs: 48 },
+                }}
+              >
+                <img src={Logo} alt="Tradluxe Logo" height={48} />
+              </Box>
+            </Link>
 
             <IconButton
               color="inherit"

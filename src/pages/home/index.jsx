@@ -83,6 +83,7 @@ const HomePage = () => {
                 flag={brand.flag}
                 subline={brand.subline}
                 content={brand.content}
+                name={brand.name}
               />
             </Grid>
           ))}

@@ -2,7 +2,7 @@ import { Box, Typography } from "@mui/material";
 import React from "react";
 
 // eslint-disable-next-line react/prop-types
-const BrandContainer = ({ img, logo, flag, content, subline }) => {
+const BrandContainer = ({ img, logo, flag, content, subline, name }) => {
   return (
     <Box sx={{ borderRadius: "1rem", marginTop: 3, overflow: "hidden" }}>
       <Box
@@ -16,7 +16,7 @@ const BrandContainer = ({ img, logo, flag, content, subline }) => {
       >
         <Box className="brand-container--content">
           <Box className="logo">
-            <img src={logo} alt="" width={"100%"} />
+            <img src={logo} alt={`${name} logo`} width={"100%"} />
           </Box>
           <Box className="content">
             <Typography component="h2">
