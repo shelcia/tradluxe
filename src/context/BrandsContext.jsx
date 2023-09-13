@@ -13,6 +13,7 @@ export const BrandsProvider = ({ children }) => {
       logo: Logo1,
       image: Img1,
       flag: "🇫🇷",
+      subline: "With Love, From France",
       content:
         "Made in France with Non-GMO ingredients. Full of flavour and buttery goodness. A bit of La Mere Poulard's product will take your tastebuds to France.",
     },
@@ -21,6 +22,7 @@ export const BrandsProvider = ({ children }) => {
       logo: Logo1,
       image: Img1,
       flag: "🇫🇷",
+      subline: "With Love, From France",
       content:
         "Made in France with Non-GMO ingredients. Full of flavour and buttery goodness. A bit of La Mere Poulard's product will take your tastebuds to France.",
     },
@@ -29,6 +31,7 @@ export const BrandsProvider = ({ children }) => {
       logo: Logo1,
       image: Img1,
       flag: "🇫🇷",
+      subline: "With Love, From France",
       content:
         "Made in France with Non-GMO ingredients. Full of flavour and buttery goodness. A bit of La Mere Poulard's product will take your tastebuds to France.",
     },

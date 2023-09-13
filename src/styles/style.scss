@@ -1,3 +1,7 @@
+@mixin transition--sm {
+  transition: all 0.25s ease-in-out;
+}
+
 html,
 body {
   height: 100%;
@@ -22,7 +26,7 @@ body {
   align-items: center;
 
   &--text-container {
-    background-color: rgba(255, 255, 255, 0.25);
+    background-color: rgba(0, 0, 0, 0.4);
     backdrop-filter: saturate(100%) blur(5px);
     min-height: 500px;
     display: flex;
@@ -41,6 +45,53 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  @include transition--sm;
+
+  &--content {
+    height: 100%;
+    @include transition--sm;
+  }
+
+  div.logo {
+    height: 367px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include transition--sm;
+  }
+
+  div.content {
+    height: 367px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color: #fff;
+    padding: 30px;
+    gap: 1.5rem;
+    @include transition--sm;
+
+    h2 {
+      font-family: "Playfair Display";
+      font-size: 1.5rem;
+      font-style: italic;
+      font-weight: 600;
+      line-height: 130%; /* 1.95rem */
+      letter-spacing: 0.00938rem;
+    }
+    p {
+      font-size: 1rem;
+      font-weight: 500;
+      line-height: 130%; /* 1.3rem */
+      letter-spacing: 0.00938rem;
+    }
+  }
+
+  &:hover {
+    transform: scale(1.05);
+    .brand-container--content {
+      transform: translateY(-100%);
+    }
+  }
 }
 
 // navlinks which are active

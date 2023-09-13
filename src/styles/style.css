@@ -19,7 +19,7 @@ body {
   align-items: center;
 }
 .parallax--text-container {
-  background-color: rgba(255, 255, 255, 0.25);
+  background-color: rgba(0, 0, 0, 0.4);
   -webkit-backdrop-filter: saturate(100%) blur(5px);
           backdrop-filter: saturate(100%) blur(5px);
   min-height: 500px;
@@ -38,6 +38,48 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: all 0.25s ease-in-out;
+}
+.brand-container--content {
+  height: 100%;
+  transition: all 0.25s ease-in-out;
+}
+.brand-container div.logo {
+  height: 367px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.25s ease-in-out;
+}
+.brand-container div.content {
+  height: 367px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  color: #fff;
+  padding: 30px;
+  gap: 1.5rem;
+  transition: all 0.25s ease-in-out;
+}
+.brand-container div.content h2 {
+  font-family: "Playfair Display";
+  font-size: 1.5rem;
+  font-style: italic;
+  font-weight: 600;
+  line-height: 130%; /* 1.95rem */
+  letter-spacing: 0.00938rem;
+}
+.brand-container div.content p {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 130%; /* 1.3rem */
+  letter-spacing: 0.00938rem;
+}
+.brand-container:hover {
+  transform: scale(1.05);
+}
+.brand-container:hover .brand-container--content {
+  transform: translateY(-100%);
 }
 
 .active {

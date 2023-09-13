@@ -19,6 +19,8 @@ import {
 } from "@mui/material";
 import { CgMenuRight } from "react-icons/cg";
 import { FaRegCopyright } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
+import { PiPhoneCallFill } from "react-icons/pi";
 
 const drawerWidth = 240;
 // const navItems = ["Home", "About Us", "Products"];
@@ -73,14 +75,40 @@ const Layout = () => {
   return (
     <>
       <Alert variant="filled" severity="warning">
-        Place an order now info@tradluxe.com +6589446568
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "center",
+            gap: 3,
+            width: "100%",
+          }}
+        >
+          <Typography sx={{ fontWeight: 600 }}>Place an order now</Typography>
+          <Typography sx={{ fontWeight: 600 }}>
+            <MdEmail
+              style={{ verticalAlign: "middle", marginRight: "0.25rem" }}
+            />
+            <a
+              href="mailto:info@tradluxe.com"
+              style={{ textDecoration: "underline" }}
+            >
+              info@tradluxe.com
+            </a>
+          </Typography>
+          <Typography sx={{ fontWeight: 600 }}>
+            <PiPhoneCallFill
+              style={{ verticalAlign: "middle", marginRight: "0.25rem" }}
+            />
+            <a href="tel:+6589446568">+6589446568</a>
+          </Typography>
+        </Box>
       </Alert>
       <Box>
         <AppBar component="nav" sx={{ position: "relative" }}>
           <Toolbar sx={{ justifyContent: "space-between", flex: "1 1 1" }}>
             <Box
               sx={{
-                // display: { xs: "none", sm: "block" },
                 width: { sm: 132, xs: 48 },
               }}
             >
@@ -121,7 +149,6 @@ const Layout = () => {
         </AppBar>
         <nav>
           <Drawer
-            //   container={container}
             variant="temporary"
             open={mobileOpen}
             onClose={handleDrawerToggle}

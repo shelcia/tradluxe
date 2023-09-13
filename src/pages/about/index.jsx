@@ -1,9 +1,10 @@
 import React from "react";
 import { Container, Typography } from "@mui/material";
+import { primary } from "../../theme/themeColors";
 
 const AboutPage = () => {
   return (
-    <Container>
+    <Container sx={{ minHeight: "60vh" }}>
       <Typography
         component="h1"
         variant="h2"
@@ -16,7 +17,7 @@ const AboutPage = () => {
       >
         About Us
       </Typography>
-      <Typography sx={{ fontSize: "1rem", fontWeight: 500, minHeight: "50vh" }}>
+      <Typography sx={{ fontSize: "1rem", fontWeight: 500 }}>
         TradLuxe PTE LTD is a distribution company incorporated in Singapore in
         2020. The company’s main focus is to introduce premium products to
         consumers in Singapore and to make them available through our website,
@@ -29,6 +30,15 @@ const AboutPage = () => {
         executing, setting marketing strategies and developing great
         partnerships. We are extremely passionate about what we do and strive to
         share our expertise in our product categories with our customers.
+      </Typography>
+      <Typography sx={{ fontSize: "1rem", fontWeight: 500, mt: 2 }}>
+        Email us at{" "}
+        <a
+          href="mailto:info@tradluxe.com"
+          style={{ color: primary.main, textDecoration: "underline" }}
+        >
+          info@tradluxe.com
+        </a>
       </Typography>
     </Container>
   );

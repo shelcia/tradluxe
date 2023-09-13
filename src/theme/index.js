@@ -27,6 +27,16 @@ const baseOptions = {
     },
   },
   components: {
+    MuiAlert: {
+      styleOverrides: {
+        icon: {
+          display: "none", // Hide the icon
+        },
+        message: {
+          width: "100%",
+        },
+      },
+    },
     MuiAvatar: {
       styleOverrides: {
         fallback: {
