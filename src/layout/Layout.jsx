@@ -54,13 +54,13 @@ const Layout = () => {
       <Divider />
       <List>
         {navItems.map((item) => (
-          <ListItem key={item.name} disablePadding>
-            <NavLink to={item.link}>
+          <NavLink key={item.name} to={item.link}>
+            <ListItem disablePadding>
               <ListItemButton sx={{ textAlign: "center" }}>
                 <ListItemText primary={item.name} />
               </ListItemButton>
-            </NavLink>
-          </ListItem>
+            </ListItem>
+          </NavLink>
         ))}
       </List>
       <Divider />
@@ -78,9 +78,9 @@ const Layout = () => {
         <Box
           sx={{
             display: "flex",
-            flexDirection: "row",
+            flexDirection: { xs: "column", md: "row" },
             justifyContent: "center",
-            gap: 3,
+            gap: { xs: 0.5, md: 3 },
             width: "100%",
           }}
         >
