@@ -1,15 +1,20 @@
 import React, { useContext } from "react";
-import { Box, Button, Container, Grid, Typography } from "@mui/material";
+import { Box, Container, Grid } from "@mui/material";
 import BrandContainer from "./components/BrandContainer";
 import { BrandsContext } from "../../context/BrandsContext";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
+import Img1 from "../../assets/header-img.png";
+import CustomTitle from "../../components/CustomTitle";
 
 const HomePage = () => {
   const [brands] = useContext(BrandsContext);
 
   return (
     <>
-      <div className="parallax">
+      <Box sx={{ display: "flex", justifyContent: "center", height: "100%" }}>
+        <img src={Img1} alt="header image" style={{ maxWidth: "100%" }} />
+      </Box>
+      {/* <div className="parallax">
         <Box
           sx={{ textAlign: "center", height: "100%", width: "100%" }}
           className="parallax--text-container"
@@ -65,8 +70,9 @@ const HomePage = () => {
             </Link>
           </Box>
         </Box>
-      </div>
+      </div> */}
       <Container sx={{ height: "100%" }}>
+        <CustomTitle subtitle="Discover" title="Our Brands" />
         <Grid container spacing={2}>
           {brands.map((brand, idx) => (
             <Grid
@@ -88,6 +94,9 @@ const HomePage = () => {
             </Grid>
           ))}
         </Grid>
+      </Container>
+      <Container sx={{ height: "100%" }}>
+        <CustomTitle subtitle="Find us" title="Where to find us?" />
       </Container>
     </>
   );

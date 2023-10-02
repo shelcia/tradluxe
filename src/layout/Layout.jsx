@@ -1,8 +1,8 @@
 import * as React from "react";
 import { Link, NavLink, Outlet } from "react-router-dom";
-import Logo from "../assets/logo.svg";
+import Logo from "../assets/logo/logo.svg";
 import {
-  Alert,
+  // Alert,
   AppBar,
   Box,
   Button,
@@ -19,8 +19,8 @@ import {
 } from "@mui/material";
 import { CgMenuRight } from "react-icons/cg";
 import { FaRegCopyright } from "react-icons/fa";
-import { MdEmail } from "react-icons/md";
-import { PiPhoneCallFill } from "react-icons/pi";
+// import { MdEmail } from "react-icons/md";
+// import { PiPhoneCallFill } from "react-icons/pi";
 
 const drawerWidth = 240;
 // const navItems = ["Home", "About Us", "Products"];
@@ -49,8 +49,19 @@ const Layout = () => {
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
       <Link to="/">
-        <Typography variant="h6" sx={{ my: 2 }}>
-          <img src={Logo} alt="Tradluxe Logo" height={48} />
+        <Typography
+          variant="h6"
+          sx={{
+            my: 2,
+            color: "#F0F0F0",
+            fontFamily: "'Playfair Display', sans-serif",
+            fontSize: 28,
+            fontWeight: 500,
+            lineHeight: "120%",
+          }}
+        >
+          <img src={Logo} alt="Tradluxe Logo" height={36} />
+          Tradluxe
         </Typography>
       </Link>
       <Divider />
@@ -76,7 +87,7 @@ const Layout = () => {
 
   return (
     <>
-      <Alert variant="filled" severity="warning">
+      {/* <Alert variant="filled" severity="warning">
         <Box
           sx={{
             display: "flex",
@@ -105,17 +116,46 @@ const Layout = () => {
             <a href="tel:+6589446568">+6589446568</a>
           </Typography>
         </Box>
-      </Alert>
-      <Box>
-        <AppBar component="nav" sx={{ position: "relative" }}>
-          <Toolbar sx={{ justifyContent: "space-between", flex: "1 1 1" }}>
+      </Alert> */}
+      <Box sx={{ overflowY: "auto" }}>
+        <AppBar
+          component="nav"
+          sx={{
+            boxShadow: "none",
+          }}
+          color="transparent"
+          position="absolute"
+        >
+          <Toolbar
+            sx={{
+              justifyContent: "space-between",
+              flex: "1 1 1",
+            }}
+          >
             <Link to="/">
               <Box
                 sx={{
                   width: { sm: 132, xs: 48 },
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "12px",
                 }}
               >
-                <img src={Logo} alt="Tradluxe Logo" height={48} />
+                <img src={Logo} alt="Tradluxe Logo" height={36} />
+                <Typography
+                  variant="h6"
+                  sx={{
+                    my: 2,
+                    color: "#F0F0F0",
+                    fontFamily: "'Playfair Display', sans-serif",
+                    fontSize: 28,
+                    fontWeight: 500,
+                    lineHeight: "120%",
+                  }}
+                >
+                  Tradluxe
+                </Typography>
+                {/* <img src={Logo} alt="Tradluxe Logo" height={48} /> */}
               </Box>
             </Link>
 
@@ -132,7 +172,11 @@ const Layout = () => {
             <Box sx={{ display: { xs: "none", sm: "block" } }}>
               {navItems.map((item) => (
                 <NavLink to={item.link} key={item.name}>
-                  <Button color="warning" variant="text">
+                  <Button
+                    color="secondary"
+                    variant="text"
+                    sx={{ fontSize: 18 }}
+                  >
                     {item.name}
                   </Button>
                 </NavLink>
@@ -153,6 +197,7 @@ const Layout = () => {
         </AppBar>
         <nav>
           <Drawer
+            anchor="right"
             variant="temporary"
             open={mobileOpen}
             onClose={handleDrawerToggle}

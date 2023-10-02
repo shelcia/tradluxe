@@ -66,9 +66,11 @@ const baseOptions = {
           },
         },
         containedWarning: {
-          backgroundColor: warning.main,
-          color: "#000",
-          fontSize: "0.8125rem",
+          // backgroundColor: warning.main,
+          background:
+            "linear-gradient(0deg, rgba(255, 255, 255, 0.50) 0%, rgba(255, 255, 255, 0.50) 100%), linear-gradient(94deg, #ABABAB -8.85%, #B7B7B7 32.41%, #EDEDED 56.97%, #B2B2B2 76.57%, #797979 103.05%)",
+          color: "#0F0F0F",
+          fontSize: "13px",
           fontWeight: 700,
           letterSpacing: "0.00938rem",
           lineHeight: "130%",
@@ -271,7 +273,7 @@ const baseOptions = {
     MuiButtonBase: {
       styleOverrides: {
         root: {
-          fontFamily: "'Figtree', sans-serif",
+          fontFamily: "'Open Sans', sans-serif",
         },
       },
     },
@@ -295,7 +297,7 @@ const baseOptions = {
     button: {
       fontWeight: 600,
     },
-    fontFamily: "'Figtree', sans-serif",
+    fontFamily: "'Open Sans', sans-serif",
     h1: {
       fontWeight: 800,
       fontSize: "4.25rem",
