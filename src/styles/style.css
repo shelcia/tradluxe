@@ -4,11 +4,15 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Open Sans", "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #f0f0f0;
 }
 
 .parallax {
   /* The image used */
-  background-image: url("../assets/alex-haney-CAhjZmVk5H4-unsplash.jpg");
   /* Set a specific height */
   min-height: 500px;
   /* Create the parallax scrolling effect */
@@ -30,57 +34,35 @@ body {
 }
 
 .brand-container {
-  background-color: lightgray;
-  background-position: 50%;
-  background-size: cover;
-  background-repeat: no-repeat;
   height: 367px;
-  border-radius: 1rem;
+  width: 400px;
   display: flex;
-  justify-content: center;
-  align-items: center;
   transition: all 0.25s ease-in-out;
 }
 .brand-container--content {
-  height: 100%;
-  transition: all 0.25s ease-in-out;
-}
-.brand-container div.logo {
-  height: 367px;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  gap: 14px;
   transition: all 0.25s ease-in-out;
 }
-.brand-container div.content {
-  height: 367px;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  color: #fff;
-  padding: 30px;
-  gap: 1.5rem;
-  transition: all 0.25s ease-in-out;
+.brand-container--content h2 {
+  color: #f0f0f0;
+  font-family: "Playfair Display", Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 130%;
+  letter-spacing: 0.15px;
 }
-.brand-container div.content h2 {
-  font-family: "Playfair Display";
-  font-size: 1.5rem;
-  font-style: italic;
-  font-weight: 600;
-  line-height: 130%; /* 1.95rem */
-  letter-spacing: 0.00938rem;
-}
-.brand-container div.content p {
-  font-size: 1rem;
-  font-weight: 500;
-  line-height: 130%; /* 1.3rem */
-  letter-spacing: 0.00938rem;
-}
-.brand-container:hover {
-  transform: scale(1.05);
-}
-.brand-container:hover .brand-container--content {
-  transform: translateY(-100%);
+
+.gradient {
+  /* Create the gradient overlay at the end */
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px; /* Adjust the height of the gradient as needed */
+  background: linear-gradient(90deg, transparent, #f0f0f0); /* Define your gradient here */
+  pointer-events: none; /* Allows clicking through the gradient to the content beneath */
+  z-index: 1; /* Adjust the z-index as needed */
 }
 
 .active {

@@ -1,11 +1,14 @@
-import { Container } from "@mui/material";
+import { Container, Toolbar } from "@mui/material";
 import React from "react";
 
 const ProductPage = () => {
   return (
-    <Container>
-      <h1>Products</h1>
-    </Container>
+    <>
+      <Toolbar sx={{ mt: 4 }} />
+      <Container>
+        <h1>Products</h1>
+      </Container>
+    </>
   );
 };
 

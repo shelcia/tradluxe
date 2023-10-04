@@ -1,9 +1,12 @@
 import React, { useContext } from "react";
-import { Box, Container, Grid } from "@mui/material";
+import { Box, Container, IconButton, Typography } from "@mui/material";
 import BrandContainer from "./components/BrandContainer";
+import FindUs from "./components/FindUs";
 import { BrandsContext } from "../../context/BrandsContext";
 // import { Link } from "react-router-dom";
-import Img1 from "../../assets/header-img.png";
+import HeaderImg from "../../assets/header-img.png";
+import ArrowHead from "../../assets/icons/arrow-head.svg";
+import TradLuxe from "../../assets/logo/tradlogo.svg";
 import CustomTitle from "../../components/CustomTitle";
 
 const HomePage = () => {
@@ -11,93 +14,151 @@ const HomePage = () => {
 
   return (
     <>
-      <Box sx={{ display: "flex", justifyContent: "center", height: "100%" }}>
-        <img src={Img1} alt="header image" style={{ maxWidth: "100%" }} />
-      </Box>
-      {/* <div className="parallax">
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          height: "100vh",
+          overflowX: "hidden",
+          position: "relative",
+        }}
+      >
+        <img
+          src={HeaderImg}
+          alt="Header Image"
+          style={{
+            width: "100%",
+            maxHeight: "100%",
+            objectFit: "cover",
+          }}
+        />
         <Box
-          sx={{ textAlign: "center", height: "100%", width: "100%" }}
-          className="parallax--text-container"
+          sx={{
+            position: "absolute",
+            bottom: "10px", // Adjust the position as needed
+            left: "50%",
+            transform: "translateX(-50%)",
+            textAlign: "center",
+          }}
         >
-          <Typography
-            component="h1"
-            variant="h2"
-            sx={{
-              fontFamily: "Playfair Display",
-              fontStyle: "italic",
-              fontSize: "3.5rem",
-              fontWeight: 700,
-              color: "#fff",
-            }}
-          >
-            Taste the World&apos;s Finest Delights
-          </Typography>
           <Typography
             variant="h5"
             sx={{
-              fontFamily: "Playfair Display",
-              fontStyle: "italic",
-              fontSize: "2.25rem",
-              fontWeight: 500,
-              lineHeight: "150%",
-              color: "#fff",
+              fontFamily: "'Playfair Display', sans-serif",
+              fontSize: "18px",
+              fontWeight: 600,
+              lineHeight: "130%",
+              textTransform: "capitalize",
+              color: "#F0F0F0",
             }}
           >
-            from the comfort of your home
+            Scroll to see more
           </Typography>
-          <Box
-            sx={{
-              display: "flex",
-              gap: "0.375rem",
-              justifyContent: "center",
-              marginTop: "2.35rem",
-              flexDirection: { xs: "column", sm: "row" },
+          <IconButton
+            onClick={() => {
+              const section = document.getElementById("brands");
+              if (section) {
+                section.scrollIntoView({ behavior: "smooth" });
+              }
             }}
           >
-            <Link to="/products">
-              <Button variant="contained" color="warning">
-                Explore now
-              </Button>
-            </Link>
-            <Link to="/contact-us">
-              <Button
-                variant="outlined"
-                color="warning"
-                sx={{ color: "#FFE255" }}
-              >
-                contact Us
-              </Button>
-            </Link>
-          </Box>
+            <img src={ArrowHead} alt="arrow-head" />
+          </IconButton>
         </Box>
-      </div> */}
-      <Container sx={{ height: "100%" }}>
+      </Box>
+
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          height: "100%",
+          my: 8,
+        }}
+      >
+        <img src={TradLuxe} alt="TradLuxe Image" style={{ maxWidth: "100%" }} />
+      </Box>
+
+      <Box sx={{ my: 5 }}>
         <CustomTitle subtitle="Discover" title="Our Brands" />
-        <Grid container spacing={2}>
-          {brands.map((brand, idx) => (
-            <Grid
-              item
-              xs={12}
-              sm={6}
-              lg={4}
-              key={idx}
-              sx={{ overflow: "hidden" }}
-            >
-              <BrandContainer
-                img={brand.image}
-                logo={brand.logo}
-                flag={brand.flag}
-                subline={brand.subline}
-                content={brand.content}
-                name={brand.name}
-              />
-            </Grid>
-          ))}
-        </Grid>
-      </Container>
+      </Box>
+
+      <Box
+        sx={{
+          position: "relative",
+          "&::after": {
+            content: '""',
+            position: "absolute",
+            bottom: 0,
+            right: 0,
+            width: "15%",
+            height: "100%",
+            background:
+              "linear-gradient(90deg, transparent, #F0F0F0 80%, #F0F0F0 100%)",
+            pointerEvents: "none",
+            zIndex: 1,
+          },
+        }}
+      >
+        <Box
+          id="brands"
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            my: 8,
+            overflowX: "scroll",
+            pb: 3,
+            position: "relative",
+            width: "100%",
+          }}
+        >
+          {/* <div className="gradient"></div> */}
+          <Container
+            sx={{
+              display: "grid",
+              gridTemplateColumns: "repeat(7, 400px)",
+              gap: 3,
+            }}
+          >
+            {brands.map((brand, idx) => (
+              <Box
+                key={idx}
+                sx={{ overflow: "hidden", mt: idx % 2 === 0 ? 0 : 5 }}
+              >
+                <BrandContainer
+                  img={brand.image}
+                  logo={brand.logo}
+                  flag={brand.flag}
+                  subline={brand.subline}
+                  content={brand.content}
+                  name={brand.name}
+                />
+              </Box>
+            ))}
+
+            <Box sx={{ alignItems: "center", height: "100%", display: "flex" }}>
+              <Typography
+                component="h4"
+                sx={{
+                  color: "#595959",
+                  fontFamily: "'Playfair Display', sans-serif",
+                  fontSize: "64px",
+                  fontWeight: 400,
+                  lineHeight: "100%",
+                }}
+              >
+                Coming Soon...
+              </Typography>
+            </Box>
+          </Container>
+        </Box>
+      </Box>
+
       <Container sx={{ height: "100%" }}>
         <CustomTitle subtitle="Find us" title="Where to find us?" />
       </Container>
+      <FindUs />
+      <Container>{/* <FindUs /> */}</Container>
     </>
   );
 };

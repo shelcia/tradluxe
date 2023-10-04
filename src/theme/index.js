@@ -344,8 +344,7 @@ const themesOptions = {
       info,
       divider: secondary[300],
       background: {
-        // default: "#f3f4f9",
-        default: "#fff",
+        default: "#F0F0F0",
       },
       text: {
         primary: secondary[500],
