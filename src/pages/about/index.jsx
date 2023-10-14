@@ -21,29 +21,36 @@ const AboutPage = () => {
       <Toolbar sx={{ mt: 4 }} />
       <Box sx={{ mt: 5, position: "relative" }}>
         <img src={AboutBg} width={"100%"} />
-        <Typography
+        <Box
           sx={{
             position: "absolute",
             top: "50%",
             left: "50%",
             transform: "translate(-50%, -50%)",
-            color: "#0F0F0F",
-            fontFamily: "Playfair Display",
-            fontSize: tabMatches ? "7rem" : "1.5rem",
-            fontWeight: 500,
-            lineHeight: "120%",
+            display: "flex",
+            gap: 3,
+            alignItems: "center",
           }}
-          variant="h1"
-          component="h4"
         >
           {tabMatches ? (
             <img src={Logo} alt="Tradluxe Logo" height={144} />
           ) : (
             <img src={Logo} alt="Tradluxe Logo" height={24} />
           )}
-          {"   "}
-          Tradluxe
-        </Typography>
+          <Typography
+            sx={{
+              color: "#0F0F0F",
+              fontFamily: "Playfair Display",
+              fontSize: tabMatches ? "7rem" : "1.5rem",
+              fontWeight: 500,
+              lineHeight: "120%",
+            }}
+            variant="h1"
+            component="h4"
+          >
+            Tradluxe
+          </Typography>
+        </Box>
       </Box>
       <Container sx={{ minHeight: "60vh" }}>
         <Grid container spacing={6} sx={{ my: 4 }}>
@@ -68,13 +75,22 @@ const AboutPage = () => {
             </Typography>
           </Grid>
           <Grid item xs={6} md={6} sx={{ width: "100%" }}>
-            <Box sx={{ width: "100%" }}>
-              <img
-                src={AboutInfo}
-                alt="about us background"
-                width="100%"
-                height="auto"
-              />
+            <Box sx={{ width: "100%", textAlign: "center" }}>
+              {tabMatches ? (
+                <img
+                  src={AboutInfo}
+                  alt="about us background"
+                  width="100%"
+                  height="auto"
+                />
+              ) : (
+                <img
+                  src={AboutInfo}
+                  alt="about us background"
+                  width="200%"
+                  height="auto"
+                />
+              )}
             </Box>
           </Grid>
         </Grid>

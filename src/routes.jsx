@@ -23,7 +23,7 @@ const Loadable = (Component) => (props) =>
             ariaLabel="progress-bar-loading"
             wrapperClass="progress-bar-wrapper"
             borderColor="#000"
-            barColor="#FFE24A"
+            barColor="rgb(121, 121, 121)"
           />
         </Box>
       }
