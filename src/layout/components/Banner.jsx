@@ -7,11 +7,13 @@ import { useLocation } from "react-router-dom";
 const Banner = () => {
   const location = useLocation();
   const currentRouteName = location.pathname;
+
   return (
     <Box
       sx={{
         display: "flex",
-        flexDirection: { xs: "column", md: "row" },
+        // flexDirection: { xs: "row", md: "column" },
+        flexDirection: "row",
         justifyContent: "center",
         gap: { xs: 0.5, md: 3 },
         width: "100%",
@@ -22,6 +24,7 @@ const Banner = () => {
         pt: "6px",
         pb: "9px",
         zIndex: 1,
+        flexWrap: { xs: "wrap", md: "nowrap" },
       }}
     >
       <Typography sx={{ fontWeight: 600 }}>Place an order now</Typography>

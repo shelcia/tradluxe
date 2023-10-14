@@ -1,5 +1,11 @@
 import React, { useContext } from "react";
-import { Box, Container, IconButton, Typography } from "@mui/material";
+import {
+  Box,
+  Container,
+  IconButton,
+  Typography,
+  useMediaQuery,
+} from "@mui/material";
 import BrandContainer from "./components/BrandContainer";
 import FindUs from "./components/FindUs";
 import { BrandsContext } from "../../context/BrandsContext";
@@ -11,6 +17,7 @@ import CustomTitle from "../../components/CustomTitle";
 
 const HomePage = () => {
   const [brands] = useContext(BrandsContext);
+  const tabMatches = useMediaQuery("(min-width:900px)");
 
   return (
     <>
@@ -29,8 +36,9 @@ const HomePage = () => {
           alt="Header Image"
           style={{
             width: "100%",
-            maxHeight: "100%",
+            maxHeight: tabMatches ? "100%" : "600px",
             objectFit: "cover",
+            height: tabMatches ? "100%" : "600px",
           }}
         />
         <Box
@@ -91,10 +99,13 @@ const HomePage = () => {
             position: "absolute",
             bottom: 0,
             right: 0,
-            width: "15%",
+            width: tabMatches ? "15%" : "20%",
             height: "100%",
             background:
-              "linear-gradient(90deg, transparent, #F0F0F0 80%, #F0F0F0 100%)",
+              "linear-gradient(90deg, transparent, #F0F0F0 90%, #F0F0F0 100%)",
+            // background: tabMatches
+            //   ? "linear-gradient(90deg, transparent, #F0F0F0 80%, #F0F0F0 100%)"
+            //   : "linear-gradient(90deg, transparent, #F0F0F0 140%)",
             pointerEvents: "none",
             zIndex: 1,
           },
@@ -112,7 +123,6 @@ const HomePage = () => {
             width: "100%",
           }}
         >
-          {/* <div className="gradient"></div> */}
           <Container
             sx={{
               display: "grid",

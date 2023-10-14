@@ -11,6 +11,7 @@ import {
   ListItemText,
   Toolbar,
   Typography,
+  useMediaQuery,
 } from "@mui/material";
 import React from "react";
 import { CgMenuRight } from "react-icons/cg";
@@ -45,6 +46,8 @@ const Topbar = () => {
     setMobileOpen((prevState) => !prevState);
   };
 
+  const tabMatches = useMediaQuery("(min-width:900px)");
+
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
       <Link to="/">
@@ -52,14 +55,20 @@ const Topbar = () => {
           variant="h6"
           sx={{
             my: 2,
-            color: currentRouteName === "/" ? "#F0F0F0" : "#000",
+            // color: currentRouteName === "/" ? "#F0F0F0" : "#000",
             fontFamily: "'Playfair Display', sans-serif",
-            fontSize: 28,
+            fontSize: { xs: 20, md: 28 },
             fontWeight: 500,
             lineHeight: "120%",
           }}
         >
-          <img src={Logo} alt="Tradluxe Logo" height={36} />
+          <img
+            src={Logo}
+            alt="Tradluxe Logo"
+            height={24}
+            style={{ paddingTop: 8 }}
+          />{" "}
+          {"   "}
           Tradluxe
         </Typography>
       </Link>
@@ -110,14 +119,18 @@ const Topbar = () => {
                 gap: "12px",
               }}
             >
-              <img src={Logo} alt="Tradluxe Logo" height={36} />
+              {tabMatches ? (
+                <img src={Logo} alt="Tradluxe Logo" height={36} />
+              ) : (
+                <img src={Logo} alt="Tradluxe Logo" height={24} />
+              )}
               <Typography
                 variant="h6"
                 sx={{
                   my: 2,
                   color: currentRouteName === "/" ? "#F0F0F0" : "#000",
                   fontFamily: "'Playfair Display', sans-serif",
-                  fontSize: 28,
+                  fontSize: { xs: 20, md: 28 },
                   fontWeight: 500,
                   lineHeight: "120%",
                 }}
@@ -133,7 +146,14 @@ const Topbar = () => {
             aria-label="open drawer"
             edge="start"
             onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: "none" } }}
+            sx={{
+              mr: 2,
+              display: { sm: "none" },
+              color: currentRouteName === "/" ? "#fff" : "#000",
+              background: "rgba(255, 255, 255, 0.05)",
+              backdropFilter: "blur(6px)",
+              fontWeight: "bold",
+            }}
           >
             <CgMenuRight />
           </IconButton>

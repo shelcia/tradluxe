@@ -5,9 +5,9 @@ import {
   Grid,
   IconButton,
   InputAdornment,
-  TextField,
+  Tooltip,
   Typography,
-  styled,
+  useMediaQuery,
 } from "@mui/material";
 import React from "react";
 import {
@@ -18,32 +18,34 @@ import {
 } from "react-icons/tb";
 import { FaRegCopyright } from "react-icons/fa";
 import { FiArrowUpRight, FiMail } from "react-icons/fi";
-
-const CssTextField = styled(TextField)({
-  "& label.Mui-focused": {
-    color: "#A0AAB4",
-  },
-  "& .MuiInput-underline:after": {
-    borderBottomColor: "#B2BAC2",
-  },
-  "& .MuiOutlinedInput-root": {
-    backgroundColor: "#fff",
-    borderRadius: "40px",
-    padding: "6px 6px 6px 24px",
-    border: "none",
-    "& fieldset": {
-      borderColor: "#E0E3E7",
-    },
-    "&:hover fieldset": {
-      borderColor: "#B2BAC2",
-    },
-    "&.Mui-focused fieldset": {
-      borderColor: "#6F7E8C",
-    },
-  },
-});
+import { CustomTextFieldRounded } from "../../components/CustomTextField";
 
 const Footer = () => {
+  const tabMatches = useMediaQuery("(min-width:900px)");
+
+  const icons = [
+    {
+      icon: <TbBrandFacebook />,
+      link: "",
+      tooltip: "Facebook",
+    },
+    {
+      icon: <TbBrandInstagram />,
+      link: "",
+      tooltip: "Instagram",
+    },
+    {
+      icon: <TbBrandTwitter />,
+      link: "",
+      tooltip: "Twitter",
+    },
+    {
+      icon: <TbBrandLinkedin />,
+      link: "",
+      tooltip: "Linkedin",
+    },
+  ];
+
   return (
     <>
       <Container sx={{ mt: 8, pb: 5 }}>
@@ -75,12 +77,13 @@ const Footer = () => {
               News & Updates
             </Typography>
           </Grid>
-          <Grid item md={6} xs={12}>
-            <CssTextField
+          <Grid item md={6} xs={12} sx={{ mt: tabMatches ? 0 : 5 }}>
+            <CustomTextFieldRounded
               size="small"
               color="secondary"
               fullWidth
               placeholder="Enter email address"
+              type="email"
               InputProps={{
                 startAdornment: (
                   <InputAdornment position="start">
@@ -117,10 +120,11 @@ const Footer = () => {
           }}
         >
           <Typography variant="h3" sx={{ color: "#333333" }}>
-            <TbBrandFacebook />
-            <TbBrandInstagram />
-            <TbBrandTwitter />
-            <TbBrandLinkedin />
+            {icons.map((icon, idx) => (
+              <Tooltip title={icon.tooltip} key={idx}>
+                <IconButton sx={{ padding: "4px" }}>{icon.icon}</IconButton>
+              </Tooltip>
+            ))}
           </Typography>
         </Divider>
         <Box

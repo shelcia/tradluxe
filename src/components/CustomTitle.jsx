@@ -23,7 +23,7 @@ const CustomTitle = ({ subtitle = "", title = "" }) => {
           color: "#0F0F0F",
           fontSize: 52,
           fontWeight: 400,
-          lineHeight: "50%",
+          lineHeight: { xs: "80%", md: "50%" },
         }}
       >
         {title}

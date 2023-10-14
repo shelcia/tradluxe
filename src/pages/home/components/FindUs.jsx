@@ -28,8 +28,11 @@ const FindUs = () => {
                 <Box
                   sx={{
                     display: "flex",
-                    justifyContent: "space-between",
+                    justifyContent: { xs: "center", md: "space-between" },
                     width: "100%",
+                    flexDirection: { xs: "column", md: "row" },
+                    // flexWrap: { xs: "wrap", md: "nowrap" },
+                    // alignItems: { xs: "center", md: "inherit" },
                   }}
                 >
                   {itm.brands.map((brand, idx) => (
