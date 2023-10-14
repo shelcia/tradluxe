@@ -98,7 +98,7 @@ const Topbar = () => {
         component="nav"
         sx={{
           boxShadow: "none",
-          mt: "48px",
+          mt: { xs: "84px", md: "48px" },
           backdropFilter: "none",
         }}
         color="transparent"
@@ -137,7 +137,6 @@ const Topbar = () => {
               >
                 Tradluxe
               </Typography>
-              {/* <img src={Logo} alt="Tradluxe Logo" height={48} /> */}
             </Box>
           </Link>
 
