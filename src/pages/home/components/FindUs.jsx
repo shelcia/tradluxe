@@ -9,7 +9,7 @@ const FindUs = () => {
     <Container sx={{ pt: 3 }}>
       <Grid container spacing={3} sx={{ mt: 2 }}>
         {brands.map((itm, idx) => (
-          <Grid item xs={itm.xs} md={itm.md} key={idx}>
+          <Grid item xs={itm.xs} md={itm.md} key={idx} data-aos="zoom-in-right">
             <Item>
               <Typography
                 component={"h2"}

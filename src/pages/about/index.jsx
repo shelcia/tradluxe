@@ -2,7 +2,6 @@ import React from "react";
 import {
   Box,
   Container,
-  Divider,
   Grid,
   Toolbar,
   Typography,
@@ -13,13 +12,14 @@ import Logo from "../../assets/logo/logo.svg";
 import AboutInfo from "../../assets/images/about-info.png";
 import CustomTitle from "../../components/CustomTitle";
 import AboutProduct from "../../assets/images/about-product.png";
+import { CustomAboutDivider } from "../../components/CustomDividers";
 
 const AboutPage = () => {
   const tabMatches = useMediaQuery("(min-width:900px)");
   return (
     <>
       <Toolbar sx={{ mt: 4 }} />
-      <Box sx={{ mt: 5, position: "relative" }}>
+      <Box sx={{ mt: 5, position: "relative" }} className="page-fade">
         <img src={AboutBg} width={"100%"} />
         <Box
           sx={{
@@ -52,7 +52,7 @@ const AboutPage = () => {
           </Typography>
         </Box>
       </Box>
-      <Container sx={{ minHeight: "60vh" }}>
+      <Container sx={{ minHeight: "60vh" }} data-aos="fade-up">
         <Grid container spacing={6} sx={{ my: 4 }}>
           <Grid item xs={12} md={6}>
             <Typography
@@ -94,11 +94,12 @@ const AboutPage = () => {
             </Box>
           </Grid>
         </Grid>
-        <Divider sx={{ borderColor: "#B8B8B8" }} />
+        <CustomAboutDivider />
         <Grid
           container
           spacing={6}
           sx={{ my: { xs: 2, md: 8 }, py: { xs: 0, md: 4 } }}
+          data-aos="fade-up"
         >
           <Grid item xs={12} md={6}>
             <Typography
@@ -139,7 +140,7 @@ const AboutPage = () => {
             </Typography>
           </Grid>
         </Grid>
-        <Divider sx={{ borderColor: "#B8B8B8" }} />
+        <CustomAboutDivider />
         <Box sx={{ pt: 4 }}>
           <CustomTitle subtitle="Find us" title="Our Retail Presence" />
         </Box>
@@ -172,6 +173,7 @@ const AboutPage = () => {
             zIndex: 1,
           },
         }}
+        data-aos="fade-up"
       >
         <Box
           id="brands"

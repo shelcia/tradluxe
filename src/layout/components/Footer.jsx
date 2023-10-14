@@ -5,6 +5,7 @@ import {
   Grid,
   IconButton,
   InputAdornment,
+  Link,
   Tooltip,
   Typography,
   useMediaQuery,
@@ -26,29 +27,29 @@ const Footer = () => {
   const icons = [
     {
       icon: <TbBrandFacebook />,
-      link: "",
+      link: "https://www.facebook.com/TradluxeSingapore",
       tooltip: "Facebook",
     },
     {
       icon: <TbBrandInstagram />,
-      link: "",
+      link: "https://www.instagram.com/TradluxeSingapore/",
       tooltip: "Instagram",
     },
     {
       icon: <TbBrandTwitter />,
-      link: "",
+      link: "https://www.facebook.com/TradluxeSingapore",
       tooltip: "Twitter",
     },
     {
       icon: <TbBrandLinkedin />,
-      link: "",
+      link: "https://www.facebook.com/TradluxeSingapore",
       tooltip: "Linkedin",
     },
   ];
 
   return (
     <>
-      <Container sx={{ mt: 8, pb: 5 }}>
+      <Container sx={{ mt: 8, pb: 5 }} data-aos="fade-up">
         <Grid container>
           <Grid item md={6} xs={12}>
             <Typography
@@ -119,10 +120,31 @@ const Footer = () => {
             },
           }}
         >
-          <Typography variant="h3" sx={{ color: "#333333" }}>
+          <Typography
+            variant="h3"
+            sx={{
+              color: "#333333",
+            }}
+          >
             {icons.map((icon, idx) => (
               <Tooltip title={icon.tooltip} key={idx}>
-                <IconButton sx={{ padding: "4px" }}>{icon.icon}</IconButton>
+                <IconButton
+                  sx={{
+                    padding: "4px",
+                  }}
+                  component={Link}
+                  href={icon.link}
+                  target="_blank"
+                >
+                  {React.cloneElement(icon.icon, {
+                    style: {
+                      width: "1.875rem",
+                      height: "1.875rem",
+                      color: "#333333",
+                      strokeWidth: "1.5",
+                    },
+                  })}
+                </IconButton>
               </Tooltip>
             ))}
           </Typography>

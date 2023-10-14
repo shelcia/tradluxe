@@ -5,7 +5,7 @@ const ProductPage = () => {
   return (
     <>
       <Toolbar sx={{ mt: 4 }} />
-      <Container>
+      <Container className="page-fade">
         <h1>Products</h1>
       </Container>
     </>

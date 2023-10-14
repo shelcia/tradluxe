@@ -11,7 +11,9 @@ const Layout = () => {
       <Banner />
       <Box sx={{ overflowY: "auto" }}>
         <Topbar />
-        <Outlet />
+        <Box>
+          <Outlet />
+        </Box>
       </Box>
       <Footer />
     </>

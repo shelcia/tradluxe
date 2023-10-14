@@ -30,6 +30,7 @@ const HomePage = () => {
           overflowX: "hidden",
           position: "relative",
         }}
+        className="page-fade"
       >
         <img
           src={HeaderImg}
@@ -142,6 +143,7 @@ const HomePage = () => {
                   subline={brand.subline}
                   content={brand.content}
                   name={brand.name}
+                  idx={idx}
                 />
               </Box>
             ))}

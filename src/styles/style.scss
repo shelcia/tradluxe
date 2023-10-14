@@ -19,32 +19,6 @@ body {
   background-color: #f0f0f0;
 }
 
-.parallax {
-  /* The image used */
-  // background-image: url("../assets/alex-haney-CAhjZmVk5H4-unsplash.jpg");
-
-  /* Set a specific height */
-  min-height: 500px;
-
-  /* Create the parallax scrolling effect */
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  //   top: calc(48px + 56px);
-  display: flex;
-  align-items: center;
-
-  &--text-container {
-    background-color: rgba(0, 0, 0, 0.4);
-    backdrop-filter: saturate(100%) blur(5px);
-    min-height: 500px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-}
-
 .brand-container {
   height: 367px;
   width: 400px;
@@ -67,69 +41,47 @@ body {
 
     @include transition--sm;
   }
-
-  // div.logo {
-  //   height: 367px;
-  //   display: flex;
-  //   justify-content: center;
-  //   align-items: center;
-  //   @include transition--sm;
-  // }
-
-  // div.content {
-  //   height: 367px;
-  //   display: flex;
-  //   justify-content: center;
-  //   flex-direction: column;
-  //   color: #fff;
-  //   padding: 30px;
-  //   gap: 1.5rem;
-  //   @include transition--sm;
-
-  //   h2 {
-  //     font-family: "Playfair Display";
-  //     font-size: 1.5rem;
-  //     font-style: italic;
-  //     font-weight: 600;
-  //     line-height: 130%; /* 1.95rem */
-  //     letter-spacing: 0.00938rem;
-  //   }
-  //   p {
-  //     font-size: 1rem;
-  //     font-weight: 500;
-  //     line-height: 130%; /* 1.3rem */
-  //     letter-spacing: 0.00938rem;
-  //   }
-  // }
-
-  // &:hover {
-  //   transform: scale(1.05);
-  //   .brand-container--content {
-  //     transform: translateY(-100%);
-  //   }
-  // }
 }
-
-.gradient {
-  /* Create the gradient overlay at the end */
-  position: sticky;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100px; /* Adjust the height of the gradient as needed */
-  background: linear-gradient(
-    90deg,
-    transparent,
-    #f0f0f0
-  ); /* Define your gradient here */
-  pointer-events: none; /* Allows clicking through the gradient to the content beneath */
-  z-index: 1; /* Adjust the z-index as needed */
-}
-
 // navlinks which are active
 .active {
   text-decoration: underline;
   button {
     text-decoration: underline;
   }
+}
+
+@keyframes page-fade {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.page-fade {
+  animation: page-fade 0.2s;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 2px;
+  height: 2px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }

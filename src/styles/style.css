@@ -11,28 +11,6 @@ body {
   background-color: #f0f0f0;
 }
 
-.parallax {
-  /* The image used */
-  /* Set a specific height */
-  min-height: 500px;
-  /* Create the parallax scrolling effect */
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: flex;
-  align-items: center;
-}
-.parallax--text-container {
-  background-color: rgba(0, 0, 0, 0.4);
-  -webkit-backdrop-filter: saturate(100%) blur(5px);
-          backdrop-filter: saturate(100%) blur(5px);
-  min-height: 500px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
 .brand-container {
   height: 367px;
   width: 400px;
@@ -53,21 +31,44 @@ body {
   letter-spacing: 0.15px;
 }
 
-.gradient {
-  /* Create the gradient overlay at the end */
-  position: sticky;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100px; /* Adjust the height of the gradient as needed */
-  background: linear-gradient(90deg, transparent, #f0f0f0); /* Define your gradient here */
-  pointer-events: none; /* Allows clicking through the gradient to the content beneath */
-  z-index: 1; /* Adjust the z-index as needed */
-}
-
 .active {
   text-decoration: underline;
 }
 .active button {
   text-decoration: underline;
+}
+
+@keyframes page-fade {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.page-fade {
+  animation: page-fade 0.2s;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 2px;
+  height: 2px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }/*# sourceMappingURL=style.css.map */

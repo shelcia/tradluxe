@@ -18,8 +18,8 @@ const ContactPage = () => {
   return (
     <>
       <Toolbar sx={{ mt: 4 }} />
-      <Container>
-        <Box>
+      <Container className="page-fade">
+        <Box data-aos="fade-up">
           <Box sx={{ my: 8 }}>
             <Card>
               <CardContent>
@@ -51,7 +51,7 @@ const ContactPage = () => {
               </CardContent>
             </Card>
           </Box>
-          <Grid container spacing={6}>
+          <Grid container spacing={6} data-aos="fade-up">
             <Grid item xs={12} md={6}>
               <img
                 src={ContactBg}

@@ -8,6 +8,8 @@ import {
   ThemeProvider,
 } from "@mui/material";
 import "./styles/style.css";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const App = () => {
   const allPages = useRoutes(routes);
@@ -16,6 +18,8 @@ const App = () => {
     theme: "light",
     direction: "ltr",
   });
+
+  AOS.init();
 
   return (
     <StyledEngineProvider injectFirst>

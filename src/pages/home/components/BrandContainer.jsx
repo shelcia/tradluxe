@@ -2,7 +2,7 @@ import React from "react";
 import { Box, Typography } from "@mui/material";
 
 // eslint-disable-next-line react/prop-types
-const BrandContainer = ({ img, logo, flag, name }) => {
+const BrandContainer = ({ img, logo, flag, name, idx }) => {
   return (
     <Box
       sx={{
@@ -13,6 +13,9 @@ const BrandContainer = ({ img, logo, flag, name }) => {
         backgroundPosition: "center",
       }}
       id="brands"
+      data-aos="zoom-in-up"
+      data-aos-duration="600"
+      data-aos-delay={`${idx * 100}`}
     >
       <Box
         className="brand-container"

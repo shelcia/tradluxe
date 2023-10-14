@@ -13,6 +13,7 @@ const CustomTitle = ({ subtitle = "", title = "" }) => {
           fontWeight: 400,
           lineHeight: "100%",
         }}
+        data-aos="fade-up"
       >
         {subtitle}
       </Typography>
@@ -25,6 +26,7 @@ const CustomTitle = ({ subtitle = "", title = "" }) => {
           fontWeight: 400,
           lineHeight: { xs: "80%", md: "50%" },
         }}
+        data-aos="fade-up"
       >
         {title}
       </Typography>
