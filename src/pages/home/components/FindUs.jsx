@@ -7,7 +7,7 @@ const FindUs = () => {
   const [brands] = useContext(ShopUsContext);
   return (
     <Container sx={{ pt: 3 }}>
-      <Grid container spacing={3} sx={{ mt: 2 }}>
+      <Grid container spacing={3} sx={{ mt: 2, justifyContent: "center" }}>
         {brands.map((itm, idx) => (
           <Grid item xs={itm.xs} md={itm.md} key={idx} data-aos="zoom-in-right">
             <Item>

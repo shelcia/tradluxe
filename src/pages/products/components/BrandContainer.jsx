@@ -1,8 +1,9 @@
 import React from "react";
 import { Box, Typography } from "@mui/material";
+import { Link } from "react-router-dom";
 
 // eslint-disable-next-line react/prop-types
-const BrandContainer = ({ img, logo, flag, name, idx }) => {
+const BrandContainer = ({ img, logo, name, link }) => {
   return (
     <Box
       sx={{
@@ -15,19 +16,28 @@ const BrandContainer = ({ img, logo, flag, name, idx }) => {
       id="brands"
       data-aos="zoom-in-up"
       data-aos-duration="600"
-      data-aos-delay={`${idx * 100}`}
     >
       <Box
         className="brand-container"
-        sx={{ justifyContent: "left", alignItems: "flex-end", p: 2 }}
+        sx={{
+          justifyContent: "center",
+          alignItems: "center",
+          p: 2,
+          maxWidth: "100%",
+        }}
+        as={Link}
+        to={`/products/${link}`}
       >
-        <Box className="brand-container--content">
+        <Box
+          className="brand-container--content"
+          sx={{ flexDirection: "column", alignItems: "center" }}
+        >
           <Box
             sx={{
               borderRadius: "8px",
               background: name === "Airem Organic Spirits" ? "#29C2E1" : "#FFF",
-              width: "54px",
-              height: "54px",
+              width: "6.75rem",
+              height: "6.75rem",
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
@@ -38,11 +48,10 @@ const BrandContainer = ({ img, logo, flag, name, idx }) => {
               src={logo}
               alt="logo"
               width={"100%"}
-              style={{ maxHeight: "54px" }}
+              style={{ maxHeight: "6.75rem" }}
             />
           </Box>
           <Box>
-            <Typography sx={{ fontSize: "16px" }}>{flag}</Typography>
             <Typography component="h2">{name}</Typography>
           </Box>
         </Box>

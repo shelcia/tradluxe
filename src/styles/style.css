@@ -35,7 +35,11 @@ body {
   text-decoration: underline;
 }
 .active button {
-  text-decoration: underline;
+  font-weight: 700;
+}
+
+.MuiBreadcrumbs-separator {
+  color: #000;
 }
 
 @keyframes page-fade {
