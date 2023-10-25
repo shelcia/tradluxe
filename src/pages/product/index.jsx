@@ -3,7 +3,6 @@ import {
   Container,
   Grid,
   Link,
-  Toolbar,
   Typography,
   useMediaQuery,
 } from "@mui/material";
@@ -11,6 +10,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { BrandsContext } from "../../context/BrandsContext";
 import ProductsBreadCrumbs from "./components/BreadCrumbs";
+import CustomToolbar from "../../components/CustomToolbar";
 
 const Product = () => {
   const { id } = useParams();
@@ -32,7 +32,7 @@ const Product = () => {
   const tabMatches = useMediaQuery("(min-width:900px)");
   return (
     <>
-      <Toolbar sx={{ mt: 4 }} />
+      <CustomToolbar />
       <Box sx={{ mt: 5, position: "relative" }} className="page-fade">
         {brand.bg !== "" && <img src={brand.bg} width={"100%"} />}
         <Box
@@ -45,7 +45,7 @@ const Product = () => {
             alignItems: "center",
             background: "rgba(255, 255, 255, 0.70)",
             backdropFilter: "blur(6px)",
-            padding: "1rem 1.25rem",
+            padding: tabMatches ? "1rem 1.25rem" : "0.5rem 0.75rem",
             textAlign: "center",
           }}
         >
@@ -53,7 +53,7 @@ const Product = () => {
             sx={{
               color: "#0F0F0F",
               fontFamily: "Playfair Display",
-              fontSize: tabMatches ? "4.5rem" : "1.5rem",
+              fontSize: tabMatches ? "4.5rem" : "1.25rem",
               fontWeight: 500,
               lineHeight: "120%",
             }}
@@ -107,7 +107,7 @@ const Product = () => {
                 sx={{
                   color: "#000",
                   fontFamily: '"Playfair Display", serif',
-                  fontSize: "1.5rem",
+                  fontSize: tabMatches ? "1.5rem" : "1.25rem",
                   fontWeight: "400",
                 }}
               >

@@ -1,22 +1,16 @@
 import React, { useContext } from "react";
-import {
-  Box,
-  Container,
-  Grid,
-  Toolbar,
-  Typography,
-  useMediaQuery,
-} from "@mui/material";
+import { Box, Container, Grid, Typography, useMediaQuery } from "@mui/material";
 import { BrandsContext } from "../../context/BrandsContext";
 import BrandContainer from "./components/BrandContainer";
 import AboutBg from "../../assets/images/about-bg.png";
+import CustomToolbar from "../../components/CustomToolbar";
 
 const ProductPage = () => {
   const [brands] = useContext(BrandsContext);
   const tabMatches = useMediaQuery("(min-width:900px)");
   return (
     <>
-      <Toolbar sx={{ mt: 4 }} />
+      <CustomToolbar />
       <Box sx={{ mt: 5, position: "relative" }} className="page-fade">
         <img src={AboutBg} width={"100%"} />
         <Box

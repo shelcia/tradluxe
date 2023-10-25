@@ -20,7 +20,6 @@ import Logo from "../../assets/logo/logo.svg";
 
 const drawerWidth = 240;
 
-// const navItems = ["Home", "About Us", "Products"];
 const navItems = [
   {
     name: "Home",
@@ -55,7 +54,6 @@ const Topbar = () => {
           variant="h6"
           sx={{
             my: 2,
-            // color: currentRouteName === "/" ? "#F0F0F0" : "#000",
             fontFamily: "'Playfair Display', sans-serif",
             fontSize: { xs: 20, md: 28 },
             fontWeight: 500,
@@ -100,6 +98,7 @@ const Topbar = () => {
           boxShadow: "none",
           mt: { xs: "84px", md: "48px" },
           backdropFilter: "none",
+          // height: { xs: "64px", md: "auto" },
         }}
         color="transparent"
         position="absolute"

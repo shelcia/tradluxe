@@ -45,7 +45,7 @@ const HomePage = () => {
         <Box
           sx={{
             position: "absolute",
-            bottom: "10px", // Adjust the position as needed
+            bottom: "10px",
             left: "50%",
             transform: "translateX(-50%)",
             textAlign: "center",

@@ -5,7 +5,6 @@ import {
   CardContent,
   Container,
   Grid,
-  Toolbar,
   Typography,
 } from "@mui/material";
 import React from "react";
@@ -13,11 +12,12 @@ import { CustomTextField } from "../../components/CustomTextField";
 import ContactBg from "../../assets/images/contact.png";
 import CallIcon from "../../assets/icons/phone.svg";
 import MailIcon from "../../assets/icons/mail.svg";
+import CustomToolbar from "../../components/CustomToolbar";
 
 const ContactPage = () => {
   return (
     <>
-      <Toolbar sx={{ mt: 4 }} />
+      <CustomToolbar />{" "}
       <Container className="page-fade">
         <Box data-aos="fade-up">
           <Box sx={{ my: 8 }}>

@@ -1,24 +1,18 @@
 import React from "react";
-import {
-  Box,
-  Container,
-  Grid,
-  Toolbar,
-  Typography,
-  useMediaQuery,
-} from "@mui/material";
+import { Box, Container, Grid, Typography, useMediaQuery } from "@mui/material";
 import AboutBg from "../../assets/images/about-bg.png";
 import Logo from "../../assets/logo/logo.svg";
 import AboutInfo from "../../assets/images/about-info.png";
 import CustomTitle from "../../components/CustomTitle";
 import AboutProduct from "../../assets/images/about-product.png";
 import { CustomAboutDivider } from "../../components/CustomDividers";
+import CustomToolbar from "../../components/CustomToolbar";
 
 const AboutPage = () => {
   const tabMatches = useMediaQuery("(min-width:900px)");
   return (
     <>
-      <Toolbar sx={{ mt: 4 }} />
+      <CustomToolbar />
       <Box sx={{ mt: 5, position: "relative" }} className="page-fade">
         <img src={AboutBg} width={"100%"} />
         <Box
