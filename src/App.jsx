@@ -10,6 +10,7 @@ import {
 import "./styles/style.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import CustomScrollToTop from "./components/CustomScrollToTop";
 
 const App = () => {
   const allPages = useRoutes(routes);
@@ -25,6 +26,7 @@ const App = () => {
     <StyledEngineProvider injectFirst>
       <ThemeProvider theme={appTheme}>
         <CssBaseline />
+        <CustomScrollToTop />
         {allPages}
       </ThemeProvider>
     </StyledEngineProvider>
