@@ -33,8 +33,8 @@ export const BrandsProvider = ({ children }) => {
       content:
         "Made in France with Non-GMO ingredients. Full of flavour and buttery goodness. A bit of La Mere Poulard's product will take your tastebuds to France.",
       link: "la-mere-poulard",
-      bg: "",
-      shorthand: "",
+      bg: AiremBg,
+      shorthand: "La Mère Poulard",
       products: [],
     },
     {
@@ -46,8 +46,8 @@ export const BrandsProvider = ({ children }) => {
       content:
         "Made in France with Non-GMO ingredients. Full of flavour and buttery goodness. A bit of La Mere Poulard's product will take your tastebuds to France.",
       link: "forno-bonomi",
-      bg: "",
-      shorthand: "",
+      bg: AiremBg,
+      shorthand: "Forno Bonomi",
       products: [],
     },
     {
@@ -59,8 +59,8 @@ export const BrandsProvider = ({ children }) => {
       content:
         "Made in France with Non-GMO ingredients. Full of flavour and buttery goodness. A bit of La Mere Poulard's product will take your tastebuds to France.",
       link: "mesta-wine",
-      bg: "",
-      shorthand: "",
+      bg: AiremBg,
+      shorthand: "Mesta Wine",
       products: [],
     },
     // {
@@ -116,8 +116,8 @@ export const BrandsProvider = ({ children }) => {
       content:
         "Made in France with Non-GMO ingredients. Full of flavour and buttery goodness. A bit of La Mere Poulard's product will take your tastebuds to France.",
       link: "san-andres",
-      bg: "",
-      shorthand: "",
+      bg: AiremBg,
+      shorthand: "San Andres",
       products: [],
     },
   ]);

@@ -69,7 +69,7 @@ const Product = () => {
         <Typography sx={{ mb: 3 }}>
           Showing {brand?.products?.length} Products
         </Typography>
-        <Grid container spacing={1.5}>
+        <Grid container spacing={3}>
           {brand.products.map((product, idx) => (
             <Grid
               item

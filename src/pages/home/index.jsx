@@ -144,6 +144,7 @@ const HomePage = () => {
                   content={brand.content}
                   name={brand.name}
                   idx={idx}
+                  link={brand.link}
                 />
               </Box>
             ))}

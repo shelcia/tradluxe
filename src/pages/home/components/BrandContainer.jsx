@@ -1,8 +1,10 @@
 import React from "react";
 import { Box, Typography } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 
 // eslint-disable-next-line react/prop-types
-const BrandContainer = ({ img, logo, flag, name, idx }) => {
+const BrandContainer = ({ img, logo, flag, name, idx, link }) => {
+  const navigate = useNavigate();
   return (
     <Box
       sx={{
@@ -11,11 +13,13 @@ const BrandContainer = ({ img, logo, flag, name, idx }) => {
         backgroundImage: `linear-gradient(15deg, #1A1A1A 6.73%, rgba(42, 42, 42, 0.89) 19.93%, rgba(70, 70, 70, 0.00) 65.09%), url('${img}')`,
         backgroundSize: "cover",
         backgroundPosition: "center",
+        cursor: "pointer",
       }}
       id="brands"
       data-aos="zoom-in-up"
       data-aos-duration="600"
       data-aos-delay={`${idx * 100}`}
+      onClick={() => navigate(`/products/${link}`)}
     >
       <Box
         className="brand-container"
