@@ -90,6 +90,7 @@ const Product = () => {
                 alt={`product-${product.name}`}
                 width="100%"
                 data-aos="fade-up"
+                style={{maxHeight:'570px'}}
               />
               <Typography
                 component={"h4"}
