@@ -7,6 +7,9 @@ import CustomTitle from "../../components/CustomTitle";
 import AboutProduct from "../../assets/images/about-product.webp";
 import { CustomAboutDivider } from "../../components/CustomDividers";
 import CustomToolbar from "../../components/CustomToolbar";
+import MissionImg from "../../assets/icons/mission.svg";
+import ValuesImg from "../../assets/icons/values.svg";
+import BrandsImg from "../../assets/images/brands.svg";
 
 const AboutPage = () => {
   const tabMatches = useMediaQuery("(min-width:900px)");
@@ -66,17 +69,6 @@ const AboutPage = () => {
               consumers of Singapore, offering them a curated selection through
               our website, various online marketplaces and a network of
               speciality, handpicked retail channel partners.
-              {/* TradLuxe PTE LTD is a <b>distribution company</b> incorporated in
-              Singapore in 2020. The company’s main focus is to introduce
-              premium products to consumers in Singapore and to make them
-              available through our website, various online marketplaces and
-              select retail channel partners.
-              <br />
-              <br />
-              We take immense pride in our carefully selected premium food, wine
-              and personal care brands and products from across the globe which
-              helps us and our retail partners provide a unique product offering
-              to our clients and ensures customer satisfaction. */}
             </Typography>
           </Grid>
           <Grid item xs={6} md={6} sx={{ width: "100%" }}>
@@ -146,11 +138,6 @@ const AboutPage = () => {
               partnerships. Our team&apos;s passion for what we do is unrivalled
               and we are committed to sharing our expertise in the product
               categories we serve, with our customers.
-              {/* Our Team includes industry professionals with <b>Over 50 years</b>{" "}
-              of combined experience and excel at planning, executing, setting
-              marketing strategies and developing great partnerships. We are
-              extremely passionate about what we do and strive to share
-              ourexpertise in our product categories with our customers. */}
             </Typography>
           </Grid>
         </Grid>
@@ -162,41 +149,134 @@ const AboutPage = () => {
             md={6}
             // sx={{ alignItems: "center", display: "flex" }}
           >
+            <Box
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+                flexDirection: "column",
+                alignItems: "center",
+                gap: "16px",
+              }}
+            >
+              <img
+                src={MissionImg}
+                alt="Mission Icon"
+                loading="lazy"
+                height={"36px"}
+                width={"auto"}
+              />
+              <Typography
+                sx={{
+                  fontSize: { xs: "1.5rem", md: "3.25rem" },
+                  lineHeight: "110%",
+                  color: "#0F0F0F",
+                  fontFamily: "'Playfair Display', serif",
+                }}
+              >
+                Our Mission
+              </Typography>
+              <Typography
+                sx={{
+                  fontSize: { xs: "1rem", md: "1.3rem" },
+                  lineHeight: "150%",
+                  mt: "16px",
+                }}
+              >
+                Our mission is to enrich the lives of consumers in Singapore by
+                providing them with access to the finest and most sought-after
+                food and beverage products. We aim to deliver exceptional value,
+                quality, and convenience through our distribution channels,
+                backed by our expertise and commitment to excellence.
+              </Typography>
+            </Box>
+          </Grid>
+          <Grid item xs={6} md={6} sx={{ width: "100%" }}>
+            <Box
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+                flexDirection: "column",
+                alignItems: "center",
+                gap: "16px",
+              }}
+            >
+              <img
+                src={ValuesImg}
+                alt="Values Icon"
+                loading="lazy"
+                height={"36px"}
+                width={"auto"}
+              />
+              <Typography
+                sx={{
+                  fontSize: { xs: "1.5rem", md: "3.25rem" },
+                  lineHeight: "110%",
+                  color: "#0F0F0F",
+                  fontFamily: "'Playfair Display', serif",
+                }}
+              >
+                Our Core Values
+              </Typography>
+              <Typography
+                sx={{
+                  fontSize: { xs: "1rem", md: "1.3rem" },
+                  lineHeight: "150%",
+                  mt: "16px",
+                }}
+              >
+                TradLuxe&apos;s core values revolve around integrity, quality,
+                and customer satisfaction. We strive to maintain the highest
+                ethical standards in our operations, deliver products of
+                superior quality, and ensure our customers&apos; needs are met
+                beyond their expectations.
+              </Typography>
+            </Box>
+          </Grid>
+        </Grid>
+        <CustomAboutDivider />
+        <Grid container spacing={6} sx={{ my: 4 }}>
+          <Grid item xs={6} md={6} sx={{ width: "100%" }}>
+            <Box sx={{ width: "100%", textAlign: "center" }}>
+              <img
+                src={BrandsImg}
+                alt="about us background"
+                width="auto"
+                height="300px"
+                loading="lazy"
+              />
+            </Box>
+          </Grid>
+          <Grid item xs={12} md={6}>
             <Typography
               sx={{
                 fontSize: { xs: "1rem", md: "1.3rem" },
                 lineHeight: "150%",
               }}
             >
-              Our mission is to enrich the lives of consumers in Singapore by
-              providing them with access to the finest and most sought-after
-              food and beverage products. We aim to deliver exceptional value,
-              quality, and convenience through our distribution channels, backed
-              by our expertise and commitment to excellence.
+              TradLuxe is a dynamic distribution company established in
+              Singapore in 2020 by a group of passionate individuals. Our
+              primary objective is to bring premium products to the discerning
+              consumers of Singapore, offering them a curated selection through
+              our website, various online marketplaces and a network of
+              speciality, handpicked retail channel partners.
             </Typography>
           </Grid>
-          <Grid item xs={6} md={6} sx={{ width: "100%" }}>
-            <Box sx={{ width: "100%", textAlign: "center" }}>
-              {tabMatches ? (
-                <img
-                  src={AboutInfo}
-                  alt="about us background"
-                  width="100%"
-                  height="auto"
-                  loading="lazy"
-                />
-              ) : (
-                <img
-                  src={AboutInfo}
-                  alt="about us background"
-                  width="200%"
-                  height="auto"
-                  loading="lazy"
-                />
-              )}
-            </Box>
-          </Grid>
         </Grid>
+        <CustomAboutDivider />
+        <Typography
+          sx={{
+            color: "#000",
+            fontFamily: "'Playfair Display', serif",
+            fontSize: "2rem",
+            lineHeight: "120%",
+            my: 6,
+          }}
+        >
+          TradLuxe is dedicated to redefining the distribution of premium
+          products in Singapore and is committed to building strong connections
+          with both customers and partners. We look forward to serving the needs
+          of consumers and contributing to the growth of our industry.
+        </Typography>
         <CustomAboutDivider />
         <Box sx={{ pt: 4 }}>
           <CustomTitle subtitle="Find us" title="Our Retail Presence" />
