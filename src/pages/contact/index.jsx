@@ -9,7 +9,7 @@ import {
 } from "@mui/material";
 import React from "react";
 import { CustomTextField } from "../../components/CustomTextField";
-import ContactBg from "../../assets/images/contact.png";
+import ContactBg from "../../assets/images/contact.webp";
 import CallIcon from "../../assets/icons/phone.svg";
 import MailIcon from "../../assets/icons/mail.svg";
 import CustomToolbar from "../../components/CustomToolbar";
@@ -58,6 +58,7 @@ const ContactPage = () => {
                 alt="Contact Background"
                 width="100%"
                 height="auto"
+                loading="lazy"
               />
             </Grid>
             <Grid item xs={12} md={6}>
@@ -136,7 +137,7 @@ const ContactCard = ({ icon, title = "", href = "", content = "" }) => {
               gap: 1,
             }}
           >
-            <img src={icon} alt="call icon" />
+            <img src={icon} alt="call icon" loading="lazy" />
             <Typography
               sx={{
                 color: "#1A191A",

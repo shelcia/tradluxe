@@ -49,6 +49,7 @@ const BrandContainer = ({ img, logo, name, link }) => {
               alt="logo"
               width={"100%"}
               style={{ maxHeight: "6.75rem" }}
+              loading="lazy"
             />
           </Box>
           <Box>

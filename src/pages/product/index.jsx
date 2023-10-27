@@ -34,7 +34,15 @@ const Product = () => {
     <>
       <CustomToolbar />
       <Box sx={{ mt: 5, position: "relative" }} className="page-fade">
-        {brand.bg !== "" && <img src={brand.bg} alt={`brand-${brand.name}`} width={"100%"} style={{maxHeight:'570px', objectFit: 'cover'}}/> }
+        {brand.bg !== "" && (
+          <img
+            src={brand.bg}
+            alt={`brand-${brand.name}`}
+            width={"100%"}
+            style={{ maxHeight: "570px", objectFit: "cover" }}
+            loading="lazy"
+          />
+        )}
         <Box
           sx={{
             position: "absolute",
@@ -90,6 +98,7 @@ const Product = () => {
                 alt={`product-${product.name}`}
                 width="100%"
                 data-aos="fade-up"
+                loading="lazy"
               />
               <Typography
                 component={"h4"}

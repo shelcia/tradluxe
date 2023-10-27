@@ -1,10 +1,10 @@
 import React from "react";
 import { Box, Container, Grid, Typography, useMediaQuery } from "@mui/material";
-import AboutBg from "../../assets/images/about-bg.png";
+import AboutBg from "../../assets/images/about-bg.webp";
 import Logo from "../../assets/logo/logo.svg";
-import AboutInfo from "../../assets/images/about-info.png";
+import AboutInfo from "../../assets/images/about-info.webp";
 import CustomTitle from "../../components/CustomTitle";
-import AboutProduct from "../../assets/images/about-product.png";
+import AboutProduct from "../../assets/images/about-product.webp";
 import { CustomAboutDivider } from "../../components/CustomDividers";
 import CustomToolbar from "../../components/CustomToolbar";
 
@@ -14,7 +14,7 @@ const AboutPage = () => {
     <>
       <CustomToolbar />
       <Box sx={{ mt: 5, position: "relative" }} className="page-fade">
-        <img src={AboutBg} width={"100%"} />
+        <img src={AboutBg} width={"100%"} alt="about-tradluxe" loading="lazy" />
         <Box
           sx={{
             position: "absolute",
@@ -27,9 +27,9 @@ const AboutPage = () => {
           }}
         >
           {tabMatches ? (
-            <img src={Logo} alt="Tradluxe Logo" height={144} />
+            <img src={Logo} alt="Tradluxe Logo" height={144} loading="lazy" />
           ) : (
-            <img src={Logo} alt="Tradluxe Logo" height={24} />
+            <img src={Logo} alt="Tradluxe Logo" height={24} loading="lazy" />
           )}
           <Typography
             sx={{
@@ -87,6 +87,7 @@ const AboutPage = () => {
                   alt="about us background"
                   width="100%"
                   height="auto"
+                  loading="lazy"
                 />
               ) : (
                 <img
@@ -94,6 +95,7 @@ const AboutPage = () => {
                   alt="about us background"
                   width="200%"
                   height="auto"
+                  loading="lazy"
                 />
               )}
             </Box>
@@ -181,6 +183,7 @@ const AboutPage = () => {
                   alt="about us background"
                   width="100%"
                   height="auto"
+                  loading="lazy"
                 />
               ) : (
                 <img
@@ -188,6 +191,7 @@ const AboutPage = () => {
                   alt="about us background"
                   width="200%"
                   height="auto"
+                  loading="lazy"
                 />
               )}
             </Box>
@@ -247,10 +251,10 @@ const AboutPage = () => {
               gap: 3,
             }}
           >
-            <img src={AboutProduct} alt="About Product" />
-            <img src={AboutProduct} alt="About Product" />
-            <img src={AboutProduct} alt="About Product" />
-            <img src={AboutProduct} alt="About Product" />
+            <img src={AboutProduct} alt="About Product" loading="lazy" />
+            <img src={AboutProduct} alt="About Product" loading="lazy" />
+            <img src={AboutProduct} alt="About Product" loading="lazy" />
+            <img src={AboutProduct} alt="About Product" loading="lazy" />
           </Container>
         </Box>
       </Box>
