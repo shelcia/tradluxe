@@ -53,7 +53,9 @@ const BrandContainer = ({ img, logo, name, link }) => {
             />
           </Box>
           <Box>
-            <Typography component="h2">{name}</Typography>
+            <Typography component="h2" sx={{ fontSize: "24px" }}>
+              {name}
+            </Typography>
           </Box>
         </Box>
       </Box>

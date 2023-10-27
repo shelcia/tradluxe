@@ -347,14 +347,36 @@ const AboutPage = () => {
           <Container
             sx={{
               display: "grid",
-              gridTemplateColumns: "repeat(7, 400px)",
+              gridTemplateColumns: tabMatches
+                ? "repeat(7, 400px)"
+                : "repeat(7, 300px)",
               gap: 3,
             }}
           >
-            <img src={AboutProduct} alt="About Product" loading="lazy" />
-            <img src={AboutProduct} alt="About Product" loading="lazy" />
-            <img src={AboutProduct} alt="About Product" loading="lazy" />
-            <img src={AboutProduct} alt="About Product" loading="lazy" />
+            <img
+              src={AboutProduct}
+              alt="About Product"
+              loading="lazy"
+              style={{ width: "100%" }}
+            />
+            <img
+              src={AboutProduct}
+              alt="About Product"
+              loading="lazy"
+              style={{ width: "100%" }}
+            />
+            <img
+              src={AboutProduct}
+              alt="About Product"
+              loading="lazy"
+              style={{ width: "100%" }}
+            />
+            <img
+              src={AboutProduct}
+              alt="About Product"
+              loading="lazy"
+              style={{ width: "100%" }}
+            />
           </Container>
         </Box>
       </Box>
