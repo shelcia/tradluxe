@@ -133,7 +133,9 @@ const HomePage = () => {
           <Container
             sx={{
               display: "grid",
-              gridTemplateColumns: "repeat(7, 400px)",
+              gridTemplateColumns: tabMatches
+                ? "repeat(7, 400px)"
+                : "repeat(7, 200px)",
               gap: 3,
             }}
           >

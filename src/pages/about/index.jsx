@@ -17,37 +17,56 @@ const AboutPage = () => {
     <>
       <CustomToolbar />
       <Box sx={{ mt: 5, position: "relative" }} className="page-fade">
-        <img src={AboutBg} width={"100%"} alt="about-tradluxe" loading="lazy" />
-        <Box
-          sx={{
-            position: "absolute",
-            top: "50%",
-            left: "50%",
-            transform: "translate(-50%, -50%)",
-            display: "flex",
-            gap: 3,
-            alignItems: "center",
-          }}
-        >
-          {tabMatches ? (
-            <img src={Logo} alt="Tradluxe Logo" height={144} loading="lazy" />
-          ) : (
-            <img src={Logo} alt="Tradluxe Logo" height={24} loading="lazy" />
-          )}
-          <Typography
-            sx={{
-              color: "#0F0F0F",
-              fontFamily: "Playfair Display",
-              fontSize: tabMatches ? "7rem" : "1.5rem",
-              fontWeight: 500,
-              lineHeight: "120%",
-            }}
-            variant="h1"
-            component="h4"
-          >
-            Tradluxe
-          </Typography>
-        </Box>
+        {tabMatches && (
+          <>
+            <img
+              src={AboutBg}
+              width={"100%"}
+              alt="about-tradluxe"
+              loading="lazy"
+            />
+            <Box
+              sx={{
+                position: "absolute",
+                top: "50%",
+                left: "50%",
+                transform: "translate(-50%, -50%)",
+                display: "flex",
+                gap: 3,
+                alignItems: "center",
+              }}
+            >
+              {tabMatches ? (
+                <img
+                  src={Logo}
+                  alt="Tradluxe Logo"
+                  height={144}
+                  loading="lazy"
+                />
+              ) : (
+                <img
+                  src={Logo}
+                  alt="Tradluxe Logo"
+                  height={24}
+                  loading="lazy"
+                />
+              )}
+              <Typography
+                sx={{
+                  color: "#0F0F0F",
+                  fontFamily: "Playfair Display",
+                  fontSize: tabMatches ? "7rem" : "1.5rem",
+                  fontWeight: 500,
+                  lineHeight: "120%",
+                }}
+                variant="h1"
+                component="h4"
+              >
+                Tradluxe
+              </Typography>
+            </Box>
+          </>
+        )}
       </Box>
       <Container sx={{ minHeight: "60vh" }} data-aos="fade-up">
         <Grid container spacing={6} sx={{ my: 4 }}>
@@ -190,7 +209,7 @@ const AboutPage = () => {
               </Typography>
             </Box>
           </Grid>
-          <Grid item xs={6} md={6} sx={{ width: "100%" }}>
+          <Grid item xs={12} md={6} sx={{ width: "100%" }}>
             <Box
               sx={{
                 display: "flex",
@@ -235,7 +254,7 @@ const AboutPage = () => {
         </Grid>
         <CustomAboutDivider />
         <Grid container spacing={6} sx={{ my: 4 }}>
-          <Grid item xs={6} md={6} sx={{ width: "100%" }}>
+          <Grid item xs={12} md={6} sx={{ width: "100%" }}>
             <Box sx={{ width: "100%", textAlign: "center" }}>
               <img
                 src={BrandsImg}
@@ -243,6 +262,7 @@ const AboutPage = () => {
                 width="auto"
                 height="300px"
                 loading="lazy"
+                style={{ maxWidth: "100%" }}
               />
             </Box>
           </Grid>
@@ -267,7 +287,7 @@ const AboutPage = () => {
           sx={{
             color: "#000",
             fontFamily: "'Playfair Display', serif",
-            fontSize: "2rem",
+            fontSize: tabMatches ? "2rem" : "1rem",
             lineHeight: "120%",
             my: 6,
           }}

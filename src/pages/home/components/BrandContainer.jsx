@@ -1,10 +1,12 @@
 import React from "react";
-import { Box, Typography } from "@mui/material";
+import { Box, Typography, useMediaQuery } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 
 // eslint-disable-next-line react/prop-types
 const BrandContainer = ({ img, logo, flag, name, idx, link }) => {
   const navigate = useNavigate();
+  const tabMatches = useMediaQuery("(min-width:900px)");
+
   return (
     <Box
       sx={{
@@ -22,20 +24,24 @@ const BrandContainer = ({ img, logo, flag, name, idx, link }) => {
       onClick={() => navigate(`/products/${link}`)}
     >
       <Box
-        className="brand-container"
-        sx={{ justifyContent: "left", alignItems: "flex-end", p: 2 }}
+        className="brand-container brand-container--mobile"
+        sx={{
+          justifyContent: "left",
+          alignItems: "flex-end",
+          p: tabMatches ? 2 : 1,
+        }}
       >
         <Box className="brand-container--content">
           <Box
             sx={{
-              borderRadius: "8px",
+              borderRadius: tabMatches ? "8px" : "3px",
               background: name === "Airem Organic Spirits" ? "#29C2E1" : "#FFF",
-              width: "54px",
-              height: "54px",
+              width: tabMatches ? "54px" : "32px",
+              height: tabMatches ? "54px" : "32px",
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
-              p: 0.5,
+              p: tabMatches ? 0.5 : 0.1,
             }}
           >
             <img
@@ -48,7 +54,12 @@ const BrandContainer = ({ img, logo, flag, name, idx, link }) => {
           </Box>
           <Box>
             <Typography sx={{ fontSize: "16px" }}>{flag}</Typography>
-            <Typography component="h2">{name}</Typography>
+            <Typography
+              component="h2"
+              sx={{ fontSize: tabMatches ? "24px" : "18px" }}
+            >
+              {name}
+            </Typography>
           </Box>
         </Box>
       </Box>
