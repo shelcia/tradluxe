@@ -48,14 +48,25 @@ const AboutPage = () => {
       </Box>
       <Container sx={{ minHeight: "60vh" }} data-aos="fade-up">
         <Grid container spacing={6} sx={{ my: 4 }}>
-          <Grid item xs={12} md={6}>
+          <Grid
+            item
+            xs={12}
+            md={6}
+            // sx={{ alignItems: "center", display: "flex" }}
+          >
             <Typography
               sx={{
                 fontSize: { xs: "1rem", md: "1.3rem" },
                 lineHeight: "150%",
               }}
             >
-              TradLuxe PTE LTD is a <b>distribution company</b> incorporated in
+              TradLuxe is a dynamic distribution company established in
+              Singapore in 2020 by a group of passionate individuals. Our
+              primary objective is to bring premium products to the discerning
+              consumers of Singapore, offering them a curated selection through
+              our website, various online marketplaces and a network of
+              speciality, handpicked retail channel partners.
+              {/* TradLuxe PTE LTD is a <b>distribution company</b> incorporated in
               Singapore in 2020. The company’s main focus is to introduce
               premium products to consumers in Singapore and to make them
               available through our website, various online marketplaces and
@@ -65,7 +76,7 @@ const AboutPage = () => {
               We take immense pride in our carefully selected premium food, wine
               and personal care brands and products from across the globe which
               helps us and our retail partners provide a unique product offering
-              to our clients and ensures customer satisfaction.
+              to our clients and ensures customer satisfaction. */}
             </Typography>
           </Grid>
           <Grid item xs={6} md={6} sx={{ width: "100%" }}>
@@ -105,7 +116,7 @@ const AboutPage = () => {
                 lineHeight: "150%",
               }}
             >
-              50 Years
+              55 Years
             </Typography>
             <Typography
               sx={{
@@ -126,12 +137,60 @@ const AboutPage = () => {
                 lineHeight: "150%",
               }}
             >
-              Our Team includes industry professionals with <b>Over 50 years</b>{" "}
+              At TradLuxe, we take pride in our dedicated team of professionals,
+              boasting over 55 years of combined experience in the industry. We
+              excel in every aspect of the business, from strategic planning and
+              execution to marketing strategies and the cultivation of valuable
+              partnerships. Our team&apos;s passion for what we do is unrivalled
+              and we are committed to sharing our expertise in the product
+              categories we serve, with our customers.
+              {/* Our Team includes industry professionals with <b>Over 50 years</b>{" "}
               of combined experience and excel at planning, executing, setting
               marketing strategies and developing great partnerships. We are
               extremely passionate about what we do and strive to share
-              ourexpertise in our product categories with our customers.
+              ourexpertise in our product categories with our customers. */}
             </Typography>
+          </Grid>
+        </Grid>
+        <CustomAboutDivider />
+        <Grid container spacing={6} sx={{ my: 4 }}>
+          <Grid
+            item
+            xs={12}
+            md={6}
+            // sx={{ alignItems: "center", display: "flex" }}
+          >
+            <Typography
+              sx={{
+                fontSize: { xs: "1rem", md: "1.3rem" },
+                lineHeight: "150%",
+              }}
+            >
+              Our mission is to enrich the lives of consumers in Singapore by
+              providing them with access to the finest and most sought-after
+              food and beverage products. We aim to deliver exceptional value,
+              quality, and convenience through our distribution channels, backed
+              by our expertise and commitment to excellence.
+            </Typography>
+          </Grid>
+          <Grid item xs={6} md={6} sx={{ width: "100%" }}>
+            <Box sx={{ width: "100%", textAlign: "center" }}>
+              {tabMatches ? (
+                <img
+                  src={AboutInfo}
+                  alt="about us background"
+                  width="100%"
+                  height="auto"
+                />
+              ) : (
+                <img
+                  src={AboutInfo}
+                  alt="about us background"
+                  width="200%"
+                  height="auto"
+                />
+              )}
+            </Box>
           </Grid>
         </Grid>
         <CustomAboutDivider />
