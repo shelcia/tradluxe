@@ -46,7 +46,14 @@ body {
     @media screen and (max-width: 900px) {
       height: 210px;
       width: 200px;
+      .brand-container--content {
+        align-items: flex-end;
+      }
     }
+  }
+
+  &--product {
+    width: 100%;
   }
 }
 

@@ -18,7 +18,7 @@ const BrandContainer = ({ img, logo, name, link }) => {
       data-aos-duration="600"
     >
       <Box
-        className="brand-container"
+        className="brand-container brand-container--product"
         sx={{
           justifyContent: "center",
           alignItems: "center",
