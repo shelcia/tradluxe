@@ -10,7 +10,7 @@ import BrandContainer from "./components/BrandContainer";
 import FindUs from "./components/FindUs";
 import { BrandsContext } from "../../context/BrandsContext";
 // import { Link } from "react-router-dom";
-import HeaderImg from "../../assets/images/header-img.png";
+import HeaderImg from "../../assets/images/header-img.webp";
 import ArrowHead from "../../assets/icons/arrow-head.svg";
 import TradLuxe from "../../assets/logo/tradlogo.svg";
 import CustomTitle from "../../components/CustomTitle";

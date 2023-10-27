@@ -14,10 +14,10 @@ import Logo3 from "../assets/logo/3.png";
 import Logo5 from "../assets/logo/5.png";
 import Logo6 from "../assets/logo/6.png";
 
-import AiremBg from "../assets/products/airem/bg.png";
-import Airem1 from "../assets/products/airem/1.png";
-import Airem2 from "../assets/products/airem/2.png";
-import Airem3 from "../assets/products/airem/3.png";
+import AiremBg from "../assets/products/airem/bg.webp";
+import Airem1 from "../assets/products/airem/1.webp";
+import Airem2 from "../assets/products/airem/2.webp";
+import Airem3 from "../assets/products/airem/3.webp";
 
 import MestaBg from "../assets/products/mesta/bg.webp";
 import Mesta1 from "../assets/products/mesta/1.webp";
