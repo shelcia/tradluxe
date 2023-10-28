@@ -65,6 +65,7 @@ const Topbar = () => {
             src={Logo}
             alt="Tradluxe Logo"
             height={24}
+            width={24}
             style={{ paddingTop: 8 }}
             loading="eager"
           />{" "}
@@ -125,6 +126,7 @@ const Topbar = () => {
                   src={Logo}
                   alt="Tradluxe Logo"
                   height={36}
+                  width={"auto"}
                   loading="lazy"
                 />
               ) : (
@@ -132,7 +134,8 @@ const Topbar = () => {
                   src={Logo}
                   alt="Tradluxe Logo"
                   height={24}
-                  loading="lazy"
+                  width={"auto"}
+                  loading="eager"
                 />
               )}
               <Typography
