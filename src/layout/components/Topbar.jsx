@@ -16,7 +16,8 @@ import {
 import React from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import Logo from "../../assets/logo/logo.svg";
-import MenuIcon from "../../assets/icons/menu.svg";
+import MenuWhiteIcon from "../../assets/icons/menu-white.svg";
+import MenuBlackIcon from "../../assets/icons/menu-black.svg";
 
 const drawerWidth = 240;
 
@@ -164,8 +165,21 @@ const Topbar = () => {
               fontWeight: "bold",
             }}
           >
-            {/* <CgMenuRight /> */}
-            <img src={MenuIcon} alt="" />
+            {currentRouteName === "/" ? (
+              <img
+                src={MenuWhiteIcon}
+                alt="menu-white"
+                height={20}
+                width={20}
+              />
+            ) : (
+              <img
+                src={MenuBlackIcon}
+                alt="menu-black"
+                height={20}
+                width={20}
+              />
+            )}
           </IconButton>
 
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
