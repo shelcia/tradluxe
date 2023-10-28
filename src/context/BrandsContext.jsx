@@ -24,6 +24,12 @@ import Mesta2 from "../assets/products/mesta/2.webp";
 import Mesta3 from "../assets/products/mesta/3.webp";
 import Mesta4 from "../assets/products/mesta/4.webp";
 
+import lamereBg from "../assets/products/la-mere/bg.jpg";
+import lamere1 from "../assets/products/la-mere/1.webp";
+import lamere2 from "../assets/products/la-mere/2.webp";
+import lamere3 from "../assets/products/la-mere/3.webp";
+import lamere4 from "../assets/products/la-mere/4.webp";
+
 export const BrandsContext = createContext();
 
 // eslint-disable-next-line react/prop-types
@@ -38,9 +44,40 @@ export const BrandsProvider = ({ children }) => {
       content:
         "Made in France with Non-GMO ingredients. Full of flavour and buttery goodness. A bit of La Mere Poulard's product will take your tastebuds to France.",
       link: "la-mere-poulard",
-      bg: AiremBg,
+      bg: lamereBg,
       shorthand: "La Mère Poulard",
-      products: [],
+      products: [
+        {
+          name: "La Mère Poulard Palets Citron - Lemon French Shortbreads",
+          price: "$15.75",
+          quantity: "375 g",
+          img: lamere1,
+          link: "https://www.tradluxe.com/collections/la-mere-poulard/products/la-mere-poulard-palets-citron-lemon-french-shortbreads-vintage-125g-3-pack-375g",
+        },
+        {
+          name: "La Mère Poulard Palets - French Shortbreads",
+          price: "$15.75",
+          quantity: "375 g",
+          img: lamere2,
+          link: "https://www.tradluxe.com/collections/la-mere-poulard/products/la-mere-poulard-palets-french-shortbreads-vintage-125g-3-pack-375g",
+        },
+        {
+          name: "La Mère Poulard 1888 6 variétés - Carton Box",
+          price: "$19.90",
+          quantity: "375 g",
+          img: lamere3,
+          link: "https://www.tradluxe.com/collections/la-mere-poulard/products/la-mere-poulard-1888-6-varietes-carton-box-selection-6-varieties-1888-375g",
+        },
+        {
+          name: "La Mère Poulard Les Galettes d'Annette pur beurre",
+          price: "$12.50",
+          quantity: "220 g",
+          img: lamere4,
+          link: "https://www.tradluxe.com/collections/la-mere-poulard/products/la-mere-poulard-les-galettes-dannette-pur-beurre-all-butter-110g-2-pack-220g",
+        },
+
+
+      ],
     },
     {
       name: "Forno Bonomi",
