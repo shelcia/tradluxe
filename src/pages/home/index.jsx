@@ -41,6 +41,7 @@ const HomePage = () => {
             objectFit: "cover",
             height: tabMatches ? "100%" : "600px",
           }}
+          loading="lazy"
         />
         <Box
           sx={{
@@ -72,7 +73,7 @@ const HomePage = () => {
               }
             }}
           >
-            <img src={ArrowHead} alt="arrow-head" />
+            <img src={ArrowHead} alt="arrow-head" loading="lazy" />
           </IconButton>
         </Box>
       </Box>
@@ -85,7 +86,12 @@ const HomePage = () => {
           my: 8,
         }}
       >
-        <img src={TradLuxe} alt="TradLuxe Image" style={{ maxWidth: "100%" }} />
+        <img
+          src={TradLuxe}
+          alt="TradLuxe Image"
+          style={{ maxWidth: "100%" }}
+          loading="lazy"
+        />
       </Box>
 
       <Box sx={{ my: 5 }}>
@@ -127,7 +133,9 @@ const HomePage = () => {
           <Container
             sx={{
               display: "grid",
-              gridTemplateColumns: "repeat(7, 400px)",
+              gridTemplateColumns: tabMatches
+                ? "repeat(7, 400px)"
+                : "repeat(7, 200px)",
               gap: 3,
             }}
           >

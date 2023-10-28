@@ -33,7 +33,7 @@ body {
     h2 {
       color: #f0f0f0;
       font-family: $fontSecondary;
-      font-size: 24px;
+      // font-size: 24px;
       font-weight: 400;
       line-height: 130%;
       letter-spacing: 0.15px;
@@ -41,7 +41,22 @@ body {
 
     @include transition--sm;
   }
+
+  &--mobile {
+    @media screen and (max-width: 900px) {
+      height: 210px;
+      width: 200px;
+      .brand-container--content {
+        align-items: flex-end;
+      }
+    }
+  }
+
+  &--product {
+    width: 100%;
+  }
 }
+
 // navlinks which are active
 .active {
   text-decoration: underline;
