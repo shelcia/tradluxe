@@ -11,41 +11,44 @@ import {
   useMediaQuery,
 } from "@mui/material";
 import React from "react";
-import {
-  TbBrandFacebook,
-  TbBrandInstagram,
-  TbBrandLinkedin,
-  TbBrandX,
-} from "react-icons/tb";
-import { FaRegCopyright } from "react-icons/fa";
-import { FiArrowUpRight, FiMail } from "react-icons/fi";
 import { CustomTextFieldRounded } from "../../components/CustomTextField";
+import BrandFb from "../../assets/icons/brand-facebook.svg";
+import BrandInsta from "../../assets/icons/brand-instagram.svg";
+import BrandX from "../../assets/icons/brand-x.svg";
+import BrandLinkedIn from "../../assets/icons/brand-linkedIn.svg";
+import Copyright from "../../assets/icons/copyright.svg";
+import ArrowRight from "../../assets/icons/arrow-top.svg";
+import MailIcon from "../../assets/icons/mail-icon.svg";
 
 const Footer = () => {
   const tabMatches = useMediaQuery("(min-width:900px)");
 
   const icons = [
     {
-      icon: <TbBrandFacebook />,
+      icon: <img src={BrandFb} alt="facebook" width={30} height={30} />,
       link: "https://www.facebook.com/TradluxeSingapore",
       tooltip: "Facebook",
     },
     {
-      icon: <TbBrandInstagram />,
+      icon: <img src={BrandInsta} alt="instagram" width={30} height={30} />,
       link: "https://www.instagram.com/TradluxeSingapore/",
       tooltip: "Instagram",
     },
     {
-      icon: <TbBrandX />,
+      icon: <img src={BrandX} alt="x" width={30} height={30} />,
       link: "https://www.facebook.com/TradluxeSingapore",
       tooltip: "X",
     },
     {
-      icon: <TbBrandLinkedin />,
+      icon: <img src={BrandLinkedIn} alt="linkedin" width={30} height={30} />,
       link: "https://www.facebook.com/TradluxeSingapore",
       tooltip: "Linkedin",
     },
   ];
+
+  const addEmail = () => {
+    console.log("user added");
+  };
 
   return (
     <>
@@ -56,7 +59,7 @@ const Footer = () => {
               component={"h1"}
               sx={{
                 color: "#0F0F0F",
-                fontFamily: "'Playfair Display', sans-serif",
+                fontFamily: "'Playfair Display Variable', serif",
                 fontSize: "32px",
                 fontWeight: 400,
                 lineHeight: "130%",
@@ -69,7 +72,7 @@ const Footer = () => {
               component={"h1"}
               sx={{
                 color: "#0F0F0F",
-                fontFamily: "'Playfair Display', sans-serif",
+                fontFamily: "'Playfair Display Variable', serif",
                 fontSize: "48px",
                 fontWeight: 400,
                 lineHeight: "130%",
@@ -88,7 +91,7 @@ const Footer = () => {
               InputProps={{
                 startAdornment: (
                   <InputAdornment position="start">
-                    <FiMail />
+                    <img src={MailIcon} alt="mail" height={16} width={16} />
                   </InputAdornment>
                 ),
                 endAdornment: (
@@ -98,8 +101,16 @@ const Footer = () => {
                         background:
                           "linear-gradient(0deg, rgba(255, 255, 255, 0.50) 0%, rgba(255, 255, 255, 0.50) 100%), linear-gradient(94deg, #ABABAB -8.85%, #B7B7B7 32.41%, #EDEDED 56.97%, #B2B2B2 76.57%, #797979 103.05%)",
                       }}
+                      onClick={() => addEmail()}
+                      aria-label="button"
                     >
-                      <FiArrowUpRight />
+                      <img
+                        src={ArrowRight}
+                        alt="send-icon"
+                        height={20}
+                        width={20}
+                      />
+                      {/* <FiArrowUpRight /> */}
                     </IconButton>
                   </InputAdornment>
                 ),
@@ -160,7 +171,16 @@ const Footer = () => {
           }}
         >
           <Typography variant="h6">
-            Copyright <FaRegCopyright style={{ verticalAlign: "center" }} />{" "}
+            Copyright
+            {"   "}
+            <img
+              src={Copyright}
+              alt="copyright"
+              width={16}
+              height={16}
+              style={{ verticalAlign: "middle" }}
+            />
+            {"   "}
             2023 Tradluxe
           </Typography>
         </Box>

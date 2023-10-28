@@ -54,7 +54,7 @@ const AboutPage = () => {
               <Typography
                 sx={{
                   color: "#0F0F0F",
-                  fontFamily: "Playfair Display",
+                  fontFamily: '"Playfair Display Variable", serif',
                   fontSize: tabMatches ? "7rem" : "1.5rem",
                   fontWeight: 500,
                   lineHeight: "120%",
@@ -123,7 +123,7 @@ const AboutPage = () => {
             <Typography
               sx={{
                 color: "#424242",
-                fontFamily: "Playfair Display",
+                fontFamily: '"Playfair Display Variable", serif',
                 fontSize: "4rem",
                 fontWeight: 800,
                 lineHeight: "150%",
@@ -134,7 +134,7 @@ const AboutPage = () => {
             <Typography
               sx={{
                 color: "#424242",
-                fontFamily: "Playfair Display",
+                fontFamily: '"Playfair Display Variable", serif',
                 fontSize: "2rem",
                 fontWeight: 400,
                 lineHeight: "178.5%",
@@ -189,7 +189,7 @@ const AboutPage = () => {
                   fontSize: { xs: "1.5rem", md: "3.25rem" },
                   lineHeight: "110%",
                   color: "#0F0F0F",
-                  fontFamily: "'Playfair Display', serif",
+                  fontFamily: "'Playfair Display Variable', serif",
                 }}
               >
                 Our Mission
@@ -231,7 +231,7 @@ const AboutPage = () => {
                   fontSize: { xs: "1.5rem", md: "3.25rem" },
                   lineHeight: "110%",
                   color: "#0F0F0F",
-                  fontFamily: "'Playfair Display', serif",
+                  fontFamily: "'Playfair Display Variable', serif",
                 }}
               >
                 Our Core Values
@@ -286,7 +286,7 @@ const AboutPage = () => {
         <Typography
           sx={{
             color: "#000",
-            fontFamily: "'Playfair Display', serif",
+            fontFamily: "'Playfair Display Variable', serif",
             fontSize: tabMatches ? "2rem" : "1rem",
             lineHeight: "120%",
             my: 6,

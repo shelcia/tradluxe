@@ -14,9 +14,9 @@ import {
   useMediaQuery,
 } from "@mui/material";
 import React from "react";
-import { CgMenuRight } from "react-icons/cg";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import Logo from "../../assets/logo/logo.svg";
+import MenuIcon from "../../assets/icons/menu.svg";
 
 const drawerWidth = 240;
 
@@ -54,7 +54,7 @@ const Topbar = () => {
           variant="h6"
           sx={{
             my: 2,
-            fontFamily: "'Playfair Display', sans-serif",
+            fontFamily: "'Playfair Display Variable', serif",
             fontSize: { xs: 20, md: 28 },
             fontWeight: 500,
             lineHeight: "120%",
@@ -65,7 +65,7 @@ const Topbar = () => {
             alt="Tradluxe Logo"
             height={24}
             style={{ paddingTop: 8 }}
-            loading="lazy"
+            loading="eager"
           />{" "}
           {"   "}
           Tradluxe
@@ -139,7 +139,7 @@ const Topbar = () => {
                 sx={{
                   my: 2,
                   color: currentRouteName === "/" ? "#F0F0F0" : "#000",
-                  fontFamily: "'Playfair Display', sans-serif",
+                  fontFamily: "'Playfair Display Variable', serif",
                   fontSize: { xs: 20, md: 28 },
                   fontWeight: 500,
                   lineHeight: "120%",
@@ -164,7 +164,8 @@ const Topbar = () => {
               fontWeight: "bold",
             }}
           >
-            <CgMenuRight />
+            {/* <CgMenuRight /> */}
+            <img src={MenuIcon} alt="" />
           </IconButton>
 
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
@@ -173,7 +174,7 @@ const Topbar = () => {
                 <Button
                   color={currentRouteName === "/" ? "secondary" : "inherit"}
                   variant="text"
-                  sx={{ fontSize: 18 }}
+                  sx={{ fontSize: 18, fontWeight: 500 }}
                 >
                   {item.name}
                 </Button>

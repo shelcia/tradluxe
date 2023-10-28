@@ -15,7 +15,7 @@ const FindUs = () => {
                 component={"h2"}
                 sx={{
                   color: "#5B5B5B",
-                  fontFamily: "'Playfair Display', sans-serif",
+                  fontFamily: "'Playfair Display Variable', serif",
                   fontSize: "24px",
                   fontWeight: 500,
                   lineHeight: "33px",

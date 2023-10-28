@@ -60,7 +60,7 @@ const Product = () => {
           <Typography
             sx={{
               color: "#0F0F0F",
-              fontFamily: "Playfair Display",
+              fontFamily: '"Playfair Display Variable", serif',
               fontSize: tabMatches ? "4.5rem" : "1.25rem",
               fontWeight: 500,
               lineHeight: "120%",
@@ -104,7 +104,7 @@ const Product = () => {
                 component={"h4"}
                 sx={{
                   color: "#383838",
-                  fontFamily: '"Playfair Display", serif',
+                  fontFamily: '"Playfair Display Variable", serif',
                   fontSize: "1.25rem",
                   fontWeight: "600",
                 }}
@@ -115,7 +115,7 @@ const Product = () => {
                 component={"h3"}
                 sx={{
                   color: "#000",
-                  fontFamily: '"Playfair Display", serif',
+                  fontFamily: '"Playfair Display Variable", serif',
                   fontSize: tabMatches ? "1.5rem" : "1.25rem",
                   fontWeight: "400",
                 }}
