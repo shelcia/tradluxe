@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { Box, Container, Grid, Typography, useMediaQuery } from "@mui/material";
 import { BrandsContext } from "../../context/BrandsContext";
 import BrandContainer from "./components/BrandContainer";
-import AboutBg from "../../assets/images/about-bg.png";
+import AboutBg from "../../assets/images/about-bg.webp";
 import CustomToolbar from "../../components/CustomToolbar";
 
 const ProductPage = () => {
@@ -12,7 +12,7 @@ const ProductPage = () => {
     <>
       <CustomToolbar />
       <Box sx={{ mt: 5, position: "relative" }} className="page-fade">
-        <img src={AboutBg} width={"100%"} />
+        <img src={AboutBg} width={"100%"} loading="lazy" />
         <Box
           sx={{
             position: "absolute",

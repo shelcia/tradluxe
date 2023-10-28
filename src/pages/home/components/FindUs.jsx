@@ -51,6 +51,7 @@ const FindUs = () => {
                         src={brand.image}
                         alt={`${brand.name}'s logo`}
                         style={{ textAlign: "center" }}
+                        loading="lazy"
                       />
                       <Link to={brand.link}>
                         <Typography
@@ -89,6 +90,7 @@ const FindUs = () => {
                         src={brand.image}
                         alt={`${brand.name}'s logo`}
                         style={{ textAlign: "center" }}
+                        loading="lazy"
                       />
                       <Link to={brand.link}>
                         <Typography

@@ -82,7 +82,7 @@ const BannerBtn = ({
       href={href}
       target="_blank"
     >
-      <img src={logo} alt={`${title} Logo`} />
+      <img src={logo} alt={`${title} Logo`} loading="lazy" />
       {title}
     </Typography>
   );

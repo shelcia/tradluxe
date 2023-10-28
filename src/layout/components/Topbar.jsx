@@ -65,6 +65,7 @@ const Topbar = () => {
             alt="Tradluxe Logo"
             height={24}
             style={{ paddingTop: 8 }}
+            loading="lazy"
           />{" "}
           {"   "}
           Tradluxe
@@ -119,9 +120,19 @@ const Topbar = () => {
               }}
             >
               {tabMatches ? (
-                <img src={Logo} alt="Tradluxe Logo" height={36} />
+                <img
+                  src={Logo}
+                  alt="Tradluxe Logo"
+                  height={36}
+                  loading="lazy"
+                />
               ) : (
-                <img src={Logo} alt="Tradluxe Logo" height={24} />
+                <img
+                  src={Logo}
+                  alt="Tradluxe Logo"
+                  height={24}
+                  loading="lazy"
+                />
               )}
               <Typography
                 variant="h6"

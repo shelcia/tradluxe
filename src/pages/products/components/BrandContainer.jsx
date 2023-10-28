@@ -18,7 +18,7 @@ const BrandContainer = ({ img, logo, name, link }) => {
       data-aos-duration="600"
     >
       <Box
-        className="brand-container"
+        className="brand-container brand-container--product"
         sx={{
           justifyContent: "center",
           alignItems: "center",
@@ -49,10 +49,13 @@ const BrandContainer = ({ img, logo, name, link }) => {
               alt="logo"
               width={"100%"}
               style={{ maxHeight: "6.75rem" }}
+              loading="lazy"
             />
           </Box>
           <Box>
-            <Typography component="h2">{name}</Typography>
+            <Typography component="h2" sx={{ fontSize: "24px" }}>
+              {name}
+            </Typography>
           </Box>
         </Box>
       </Box>

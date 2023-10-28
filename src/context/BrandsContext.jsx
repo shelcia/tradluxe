@@ -1,18 +1,17 @@
 import React, { createContext, useState } from "react";
 
-import Img1 from "../assets/brands/La Mere Poulard.png";
-import Img2 from "../assets/brands/Forno Bonomi.png";
-import Img3 from "../assets/brands/Mesta Wine.png";
-// import Img4 from "../assets/brands/Chocovia.png";
-import Img5 from "../assets/brands/Airem Organic Spirits.png";
-import Img6 from "../assets/brands/San Andres.png";
+import Img1 from "../assets/brands/La-Mere-Poulard.webp";
+import Img2 from "../assets/brands/Forno-Bonomi.webp";
+import Img3 from "../assets/brands/Mesta Wine.webp";
+import Img5 from "../assets/brands/Airem-Organic-Spirits.webp";
+import Img6 from "../assets/brands/San Andres.webp";
 
-import Logo1 from "../assets/logo/1.png";
-import Logo2 from "../assets/logo/2.png";
-import Logo3 from "../assets/logo/3.png";
+import Logo1 from "../assets/logo/1.webp";
+import Logo2 from "../assets/logo/2.webp";
+import Logo3 from "../assets/logo/3.webp";
 // import Logo4 from "../assets/logo/4.png";
-import Logo5 from "../assets/logo/5.png";
-import Logo6 from "../assets/logo/6.png";
+import Logo5 from "../assets/logo/5.webp";
+import Logo6 from "../assets/logo/6.webp";
 
 import AiremBg from "../assets/products/airem/bg.webp";
 import Airem1 from "../assets/products/airem/1.webp";
