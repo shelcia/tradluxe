@@ -15,7 +15,7 @@ import {
   TbBrandFacebook,
   TbBrandInstagram,
   TbBrandLinkedin,
-  TbBrandTwitter,
+  TbBrandX,
 } from "react-icons/tb";
 import { FaRegCopyright } from "react-icons/fa";
 import { FiArrowUpRight, FiMail } from "react-icons/fi";
@@ -36,9 +36,9 @@ const Footer = () => {
       tooltip: "Instagram",
     },
     {
-      icon: <TbBrandTwitter />,
+      icon: <TbBrandX />,
       link: "https://www.facebook.com/TradluxeSingapore",
-      tooltip: "Twitter",
+      tooltip: "X",
     },
     {
       icon: <TbBrandLinkedin />,
