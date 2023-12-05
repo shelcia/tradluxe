@@ -27,6 +27,9 @@ const Loadable = (Component) => (props) =>
           />
         </Box>
       }
+      onError={(error) =>
+        console.error("Error during component loading:", error)
+      }
     >
       <Component {...props} />
     </Suspense>
