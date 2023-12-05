@@ -14,8 +14,8 @@ import React from "react";
 import { CustomTextFieldRounded } from "../../components/CustomTextField";
 import BrandFb from "../../assets/icons/brand-facebook.svg";
 import BrandInsta from "../../assets/icons/brand-instagram.svg";
-import BrandX from "../../assets/icons/brand-x.svg";
-import BrandLinkedIn from "../../assets/icons/brand-linkedIn.svg";
+// import BrandX from "../../assets/icons/brand-x.svg";
+// import BrandLinkedIn from "../../assets/icons/brand-linkedIn.svg";
 import Copyright from "../../assets/icons/copyright.svg";
 import ArrowRight from "../../assets/icons/arrow-top.svg";
 import MailIcon from "../../assets/icons/mail-icon.svg";
@@ -34,16 +34,16 @@ const Footer = () => {
       link: "https://www.instagram.com/TradluxeSingapore/",
       tooltip: "Instagram",
     },
-    {
-      icon: <img src={BrandX} alt="x" width={30} height={30} />,
-      link: "https://www.facebook.com/TradluxeSingapore",
-      tooltip: "X",
-    },
-    {
-      icon: <img src={BrandLinkedIn} alt="linkedin" width={30} height={30} />,
-      link: "https://www.facebook.com/TradluxeSingapore",
-      tooltip: "Linkedin",
-    },
+    // {
+    //   icon: <img src={BrandX} alt="x" width={30} height={30} />,
+    //   link: "https://www.facebook.com/TradluxeSingapore",
+    //   tooltip: "X",
+    // },
+    // {
+    //   icon: <img src={BrandLinkedIn} alt="linkedin" width={30} height={30} />,
+    //   link: "https://www.facebook.com/TradluxeSingapore",
+    //   tooltip: "Linkedin",
+    // },
   ];
 
   const addEmail = () => {
@@ -110,7 +110,6 @@ const Footer = () => {
                         height={20}
                         width={20}
                       />
-                      {/* <FiArrowUpRight /> */}
                     </IconButton>
                   </InputAdornment>
                 ),
@@ -145,7 +144,7 @@ const Footer = () => {
                   }}
                   component={Link}
                   href={icon.link}
-                  target="_blank"
+                  target="blank"
                 >
                   {React.cloneElement(icon.icon, {
                     style: {
