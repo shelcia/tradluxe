@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { Box, Container, Grid, Typography } from "@mui/material";
 import { ShopUsContext } from "../../../context/ShopUsContext";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 const FindUs = () => {
   const [brands] = useContext(ShopUsContext);
@@ -53,19 +53,19 @@ const FindUs = () => {
                         style={{ textAlign: "center" }}
                         loading="lazy"
                       />
-                      <Link to={brand.link}>
-                        <Typography
-                          sx={{
-                            color: "#5B5B5B",
-                            textAlign: "center",
-                            fontSize: "16px",
-                            fontWeight: 400,
-                            lineHeight: "130%",
-                          }}
-                        >
-                          {brand.name}
-                        </Typography>
-                      </Link>
+                      {/* <Link to={brand.link}> */}
+                      <Typography
+                        sx={{
+                          color: "#5B5B5B",
+                          textAlign: "center",
+                          fontSize: "16px",
+                          fontWeight: 400,
+                          lineHeight: "130%",
+                        }}
+                      >
+                        {brand.name}
+                      </Typography>
+                      {/* </Link> */}
                     </Box>
                   ))}
                 </Box>
@@ -92,19 +92,19 @@ const FindUs = () => {
                         style={{ textAlign: "center" }}
                         loading="lazy"
                       />
-                      <Link to={brand.link}>
-                        <Typography
-                          sx={{
-                            color: "#5B5B5B",
-                            textAlign: "center",
-                            fontSize: "16px",
-                            fontWeight: 400,
-                            lineHeight: "130%",
-                          }}
-                        >
-                          {brand.name}
-                        </Typography>
-                      </Link>
+                      {/* <Link to={brand.link}> */}
+                      <Typography
+                        sx={{
+                          color: "#5B5B5B",
+                          textAlign: "center",
+                          fontSize: "16px",
+                          fontWeight: 400,
+                          lineHeight: "130%",
+                        }}
+                      >
+                        {brand.name}
+                      </Typography>
+                      {/* </Link> */}
                     </Grid>
                   ))}
                 </Grid>
