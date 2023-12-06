@@ -30,6 +30,15 @@ import lamere2 from "../assets/products/la-mere/2.webp";
 import lamere3 from "../assets/products/la-mere/3.webp";
 import lamere4 from "../assets/products/la-mere/4.webp";
 
+import forno1 from "../assets/products/forno-bonomi/1.png";
+import forno2 from "../assets/products/forno-bonomi/2.png";
+import forno3 from "../assets/products/forno-bonomi/3.png";
+
+import san1 from "../assets/products/san-andreas/1.png";
+import san2 from "../assets/products/san-andreas/3.png";
+import san3 from "../assets/products/san-andreas/2.png";
+import san4 from "../assets/products/san-andreas/4.png";
+
 export const BrandsContext = createContext();
 
 // eslint-disable-next-line react/prop-types
@@ -88,7 +97,30 @@ export const BrandsProvider = ({ children }) => {
       link: "forno-bonomi",
       bg: AiremBg,
       shorthand: "Forno Bonomi",
-      products: [],
+      products: [
+        {
+          name: "Salty Puff Pastry Minibites Tomato And Origano Flavour ",
+          price: "$5.90",
+          quantity: "150 g",
+          img: forno1,
+          link: "https://tradluxe.myshopify.com/collections/forno-bonomi/products/salty-puff-pastry-minibites-tomato-and-origano-flavour-150g",
+        },
+        {
+          name: "Sweet Mini Bites Sugar Topped",
+          price: "$7.90",
+          quantity: "200 g",
+          img: forno2,
+          link: "https://tradluxe.myshopify.com/collections/forno-bonomi/products/copy-of-sweet-mini-bites-glazed-200g",
+        },
+        {
+          name: "Italian Shortbread Finger",
+          price: "$6.90",
+          quantity: "150 g",
+          img: forno3,
+          link: "https://tradluxe.myshopify.com/collections/forno-bonomi/products/italian-shortbread-finger-150g",
+        },
+        
+      ],
     },
     {
       name: "Mesta Wine",
@@ -187,7 +219,36 @@ export const BrandsProvider = ({ children }) => {
       link: "san-andres",
       bg: AiremBg,
       shorthand: "San Andres",
-      products: [],
+      products: [
+        {
+          name: "San Andrés Nougat Almond with tropical fruits",
+          price: "$8.49",
+          quantity: "150 gm",
+          img: san1,
+          link: "https://tradluxe.myshopify.com/collections/san-andres/products/san-andres-nougat-almond-with-tropical-fruits",
+        },
+        {
+          name: "Torta Chocolate Almond Turron Cake",
+          price: "$12.49",
+          quantity: "200 gm",
+          img: san2,
+          link: "https://tradluxe.myshopify.com/products/torta-chocolate-almond-turron-cake?_pos=1&_sid=243c34a45&_ss=r",
+        },
+        {
+          name: "San Andrés Turrón Truffled Chocolate",
+          price: "$10.99",
+          quantity: "200 gm",
+          img: san3,
+          link: "https://tradluxe.myshopify.com/collections/san-andres/products/san-andres-turron-truffled-chocolate",
+        },
+        {
+          name: "San Andrés Turrón Marzipan with Candied Fruit",
+          price: "$9.99",
+          quantity: "200 gm",
+          img: san4,
+          link: "https://tradluxe.myshopify.com/products/san-andres-turron-marzipan-with-candied-fruit?_pos=2&_psq=fruits&_ss=e&_v=1.0",
+        },
+      ],
     },
   ]);
 
