@@ -27,7 +27,7 @@ const ProductPage = () => {
           <Typography
             sx={{
               color: "#0F0F0F",
-              fontFamily: "Playfair Display",
+              fontFamily: '"Playfair Display Variable", serif',
               // fontSize: tabMatches ? "7rem" : "1.5rem",
               fontSize: tabMatches ? "4.5rem" : "1.5rem",
               fontWeight: 500,

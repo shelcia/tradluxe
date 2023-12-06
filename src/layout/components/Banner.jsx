@@ -31,7 +31,7 @@ const Banner = () => {
       <Typography sx={{ fontWeight: 600 }}>Place an order now</Typography>
       <BannerBtn
         title="Go to our Shopify store!"
-        href="https://www.tradluxe.com/collections"
+        href="https://tradluxe.myshopify.com/collections"
         target="_blank"
         bgColor1="rgba(149, 191, 70, 0.60)"
         bgColor2="rgb(149, 191, 70)"
@@ -82,7 +82,13 @@ const BannerBtn = ({
       href={href}
       target="_blank"
     >
-      <img src={logo} alt={`${title} Logo`} loading="lazy" />
+      <img
+        src={logo}
+        alt={`${title} Logo`}
+        loading="eager"
+        width={20}
+        height={20}
+      />
       {title}
     </Typography>
   );

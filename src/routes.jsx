@@ -27,6 +27,9 @@ const Loadable = (Component) => (props) =>
           />
         </Box>
       }
+      onError={(error) =>
+        console.error("Error during component loading:", error)
+      }
     >
       <Component {...props} />
     </Suspense>
@@ -37,6 +40,7 @@ const AboutPage = Loadable(lazy(() => import("./pages/about")));
 const ProductsPage = Loadable(lazy(() => import("./pages/products")));
 const ProductPage = Loadable(lazy(() => import("./pages/product")));
 const ContactPage = Loadable(lazy(() => import("./pages/contact")));
+const Error404 = Loadable(lazy(() => import("./pages/others/Error404")));
 
 const routes = [
   {
@@ -62,6 +66,10 @@ const routes = [
       {
         path: "/contact-us",
         element: <ContactPage />,
+      },
+      {
+        path: "*",
+        element: <Error404 />,
       },
     ],
   },

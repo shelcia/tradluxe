@@ -26,7 +26,7 @@ const ContactPage = () => {
                 <Typography
                   sx={{
                     color: "#5B5B5B",
-                    fontFamily: "Playfair Display",
+                    fontFamily: '"Playfair Display Variable", serif',
                     fontSize: "1.5rem",
                     fontWeight: 500,
                     lineHeight: "2.0625rem",
@@ -84,7 +84,7 @@ const ContactPage = () => {
                         my: 3,
                         color: "#070707",
                         lineHeight: "2.0625rem",
-                        fontFamily: "Playfair Display",
+                        fontFamily: '"Playfair Display Variable", serif',
                       }}
                     >
                       Get in Touch
@@ -141,7 +141,7 @@ const ContactCard = ({ icon, title = "", href = "", content = "" }) => {
             <Typography
               sx={{
                 color: "#1A191A",
-                fontFamily: "Playfair Display",
+                fontFamily: '"Playfair Display Variable", serif',
                 fontSize: "1.5rem",
                 fontWeight: 500,
                 lineHeight: "2rem",

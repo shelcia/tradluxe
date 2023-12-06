@@ -9,7 +9,6 @@ import {
 import BrandContainer from "./components/BrandContainer";
 import FindUs from "./components/FindUs";
 import { BrandsContext } from "../../context/BrandsContext";
-// import { Link } from "react-router-dom";
 import HeaderImg from "../../assets/images/header-img.webp";
 import ArrowHead from "../../assets/icons/arrow-head.svg";
 import TradLuxe from "../../assets/logo/tradlogo.svg";
@@ -41,7 +40,7 @@ const HomePage = () => {
             objectFit: "cover",
             height: tabMatches ? "100%" : "600px",
           }}
-          loading="lazy"
+          loading="eager"
         />
         <Box
           sx={{
@@ -55,7 +54,7 @@ const HomePage = () => {
           <Typography
             variant="h5"
             sx={{
-              fontFamily: "'Playfair Display', sans-serif",
+              fontFamily: "'Playfair Display Variable', serif",
               fontSize: "18px",
               fontWeight: 600,
               lineHeight: "130%",
@@ -72,8 +71,9 @@ const HomePage = () => {
                 section.scrollIntoView({ behavior: "smooth" });
               }
             }}
+            role="button"
           >
-            <img src={ArrowHead} alt="arrow-head" loading="lazy" />
+            <img src={ArrowHead} alt="arrow-head" loading="eager" />
           </IconButton>
         </Box>
       </Box>
@@ -110,9 +110,6 @@ const HomePage = () => {
             height: "100%",
             background:
               "linear-gradient(90deg, transparent, #F0F0F0 90%, #F0F0F0 100%)",
-            // background: tabMatches
-            //   ? "linear-gradient(90deg, transparent, #F0F0F0 80%, #F0F0F0 100%)"
-            //   : "linear-gradient(90deg, transparent, #F0F0F0 140%)",
             pointerEvents: "none",
             zIndex: 1,
           },
@@ -162,7 +159,7 @@ const HomePage = () => {
                 component="h4"
                 sx={{
                   color: "#595959",
-                  fontFamily: "'Playfair Display', sans-serif",
+                  fontFamily: "'Playfair Display Variable', serif",
                   fontSize: "64px",
                   fontWeight: 400,
                   lineHeight: "100%",

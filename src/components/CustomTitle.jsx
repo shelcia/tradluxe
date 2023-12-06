@@ -20,7 +20,7 @@ const CustomTitle = ({ subtitle = "", title = "" }) => {
 
       <Typography
         sx={{
-          fontFamily: "'Playfair Display', sans-serif",
+          fontFamily: "'Playfair Display Variable', serif",
           color: "#0F0F0F",
           fontSize: 52,
           fontWeight: 400,

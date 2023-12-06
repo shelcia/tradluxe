@@ -23,7 +23,7 @@ export const ShopUsContext = createContext();
 export const ShopUsProvider = ({ children }) => {
   const [brands, setBrands] = useState([
     {
-      category: "Speciality Grocery Stores",
+      category: "Online Marketplace",
       md: 8,
       xs: 12,
       brands: [
@@ -88,7 +88,7 @@ export const ShopUsProvider = ({ children }) => {
           link: "/Lazada",
         },
         {
-          name: "Istan",
+          name: "Isetan",
           image: Img10,
           link: "/Lazada",
         },

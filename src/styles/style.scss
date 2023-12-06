@@ -1,4 +1,4 @@
-$fontSecondary: "Playfair Display", Cambria, Cochin, Georgia, Times,
+$fontSecondary: "Playfair Display Variable", Cambria, Cochin, Georgia, Times,
   "Times New Roman", serif;
 
 @mixin transition--sm {
@@ -10,7 +10,7 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
-  font-family: "Open Sans", "Lucida Sans", "Lucida Sans Regular",
+  font-family: "Open Sans Variable", "Lucida Sans", "Lucida Sans Regular",
     "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   scroll-behavior: smooth;
 }

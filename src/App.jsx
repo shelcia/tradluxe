@@ -11,6 +11,8 @@ import "./styles/style.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import CustomScrollToTop from "./components/CustomScrollToTop";
+import { ErrorBoundary } from "react-error-boundary";
+import ErrorFallback from "./pages/others/Errorfallback";
 
 const App = () => {
   const allPages = useRoutes(routes);
@@ -23,13 +25,15 @@ const App = () => {
   AOS.init();
 
   return (
-    <StyledEngineProvider injectFirst>
-      <ThemeProvider theme={appTheme}>
-        <CssBaseline />
-        <CustomScrollToTop />
-        {allPages}
-      </ThemeProvider>
-    </StyledEngineProvider>
+    <ErrorBoundary FallbackComponent={ErrorFallback}>
+      <StyledEngineProvider injectFirst>
+        <ThemeProvider theme={appTheme}>
+          <CssBaseline />
+          <CustomScrollToTop />
+          {allPages}
+        </ThemeProvider>
+      </StyledEngineProvider>
+    </ErrorBoundary>
   );
 };
 
