@@ -3,8 +3,8 @@ import { Box, Container, Grid, Typography, useMediaQuery } from "@mui/material";
 import AboutBg from "../../assets/images/about-bg.webp";
 import Logo from "../../assets/logo/logo.svg";
 import AboutInfo from "../../assets/images/about-info.webp";
-import CustomTitle from "../../components/CustomTitle";
-import AboutProduct from "../../assets/images/about-product.webp";
+// import CustomTitle from "../../components/CustomTitle";
+// import AboutProduct from "../../assets/images/about-product.webp";
 import { CustomAboutDivider } from "../../components/CustomDividers";
 import CustomToolbar from "../../components/CustomToolbar";
 import MissionImg from "../../assets/icons/mission.svg";
@@ -298,11 +298,11 @@ const AboutPage = () => {
           of consumers and contributing to the growth of our industry.
         </Typography>
         <CustomAboutDivider />
-        <Box sx={{ pt: 4 }}>
+        {/* <Box sx={{ pt: 4 }}>
           <CustomTitle subtitle="Find us" title="Our Retail Presence" />
-        </Box>
+        </Box> */}
       </Container>
-      <Box
+      {/* <Box
         sx={{
           position: "relative",
           "&::after": {
@@ -379,7 +379,7 @@ const AboutPage = () => {
             />
           </Container>
         </Box>
-      </Box>
+      </Box> */}
     </>
   );
 };
