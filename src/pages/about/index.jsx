@@ -297,12 +297,12 @@ const AboutPage = () => {
           with both customers and partners. We look forward to serving the needs
           of consumers and contributing to the growth of our industry.
         </Typography>
-        <CustomAboutDivider />
+       {/* <CustomAboutDivider />
         <Box sx={{ pt: 4 }}>
           <CustomTitle subtitle="Find us" title="Our Retail Presence" />
         </Box>
       </Container>
-      {/*<Box
+      <Box
         sx={{
           position: "relative",
           "&::after": {
