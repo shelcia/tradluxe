@@ -302,7 +302,7 @@ const AboutPage = () => {
           <CustomTitle subtitle="Find us" title="Our Retail Presence" />
         </Box>
       </Container>
-      <Box
+      {/*<Box
         sx={{
           position: "relative",
           "&::after": {
@@ -379,7 +379,7 @@ const AboutPage = () => {
             />
           </Container>
         </Box>
-      </Box>
+          </Box>*/}
     </>
   );
 };
