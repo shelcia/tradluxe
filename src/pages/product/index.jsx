@@ -33,7 +33,7 @@ const Product = () => {
   return (
     <>
       <CustomToolbar />
-      <Box sx={{ mt: 5, position: "relative" }} className="page-fade">
+      {/* <Box sx={{ mt: 5, position: "relative" }} className="page-fade">
         {brand.bg !== "" && (
           <img
             src={brand.bg}
@@ -71,7 +71,7 @@ const Product = () => {
             {brand.shorthand} Products
           </Typography>
         </Box>
-      </Box>
+      </Box> */}
       <Container className="page-fade">
         <ProductsBreadCrumbs name={brand.shorthand} />
         <Typography sx={{ mb: 3 }}>
