@@ -381,8 +381,7 @@ const AboutPage = () => {
             />
           </Container>
         </Box>
-      </Box> */}
-          </Box>
+      </Box>  */}
     </>
   );
 };
