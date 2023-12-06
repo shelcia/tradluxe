@@ -299,6 +299,8 @@ const AboutPage = () => {
         </Typography>
         <CustomAboutDivider />
         {/* <Box sx={{ pt: 4 }}>
+       <CustomAboutDivider />
+        <Box sx={{ pt: 4 }}>
           <CustomTitle subtitle="Find us" title="Our Retail Presence" />
         </Box> */}
       </Container>
@@ -380,6 +382,7 @@ const AboutPage = () => {
           </Container>
         </Box>
       </Box> */}
+          </Box>
     </>
   );
 };
