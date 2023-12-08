@@ -5,6 +5,8 @@ import Img2 from "../assets/brands/Forno-Bonomi.webp";
 import Img3 from "../assets/brands/Mesta Wine.webp";
 import Img5 from "../assets/brands/Airem-Organic-Spirits.webp";
 import Img6 from "../assets/brands/San Andres.webp";
+import Img7 from "../assets/brands/tomarchio.png"
+import Img8 from "../assets/brands/8.jpg"
 
 import Logo1 from "../assets/logo/1.webp";
 import Logo2 from "../assets/logo/2.webp";
@@ -12,6 +14,9 @@ import Logo3 from "../assets/logo/3.webp";
 // import Logo4 from "../assets/logo/4.png";
 import Logo5 from "../assets/logo/5.webp";
 import Logo6 from "../assets/logo/6.webp";
+import Logo7 from "../assets/logo/7.png";
+import Logo8 from "../assets/logo/8.png";
+
 
 import AiremBg from "../assets/products/airem/bg.webp";
 import Airem1 from "../assets/products/airem/1.webp";
@@ -249,6 +254,32 @@ export const BrandsProvider = ({ children }) => {
           link: "https://tradluxe.myshopify.com/products/san-andres-turron-marzipan-with-candied-fruit?_pos=2&_psq=fruits&_ss=e&_v=1.0",
         },
       ],
+    },
+    {
+      name: "Tomarchio",
+      logo: Logo7,
+      image: Img7,
+      flag: "🇮🇹",
+      subline: "With Love, From Italy",
+      content:
+        "Made in France with Non-GMO ingredients. Full of flavour and buttery goodness. A bit of La Mere Poulard's product will take your tastebuds to France.",
+      link: "san-andres",
+      bg: AiremBg,
+      shorthand: "Tomarchio",
+      products: [],
+    },
+    {
+      name: "Novi Chocolates",
+      logo: Logo8,
+      image: Img8,
+      flag: "🇮🇹",
+      subline: "With Love, From Italy",
+      content:
+        "Made in France with Non-GMO ingredients. Full of flavour and buttery goodness. A bit of La Mere Poulard's product will take your tastebuds to France.",
+      link: "san-andres",
+      bg: AiremBg,
+      shorthand: "Novi Chocolates",
+      products: [],
     },
   ]);
 
