@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useRef, useState } from "react";
 import {
   Box,
   Container,
@@ -17,6 +17,29 @@ import CustomTitle from "../../components/CustomTitle";
 const HomePage = () => {
   const [brands] = useContext(BrandsContext);
   const tabMatches = useMediaQuery("(min-width:900px)");
+
+  const containerRef = useRef(null);
+  const [isDragging, setIsDragging] = useState(false);
+  const [startX, setStartX] = useState(0);
+
+  const handleMouseDown = (e) => {
+    setIsDragging(true);
+    setStartX(e.clientX - containerRef.current.scrollLeft);
+  };
+
+  const handleMouseMove = (e) => {
+    if (!isDragging) return;
+    const scrollX = e.clientX - startX;
+    containerRef.current.scrollLeft = scrollX;
+  };
+
+  const handleMouseUp = () => {
+    setIsDragging(false);
+  };
+
+  const handleMouseLeave = () => {
+    setIsDragging(false);
+  };
 
   return (
     <>
@@ -126,6 +149,11 @@ const HomePage = () => {
             position: "relative",
             width: "100%",
           }}
+          ref={containerRef}
+          onMouseDown={handleMouseDown}
+          onMouseMove={handleMouseMove}
+          onMouseUp={handleMouseUp}
+          onMouseLeave={handleMouseLeave}
         >
           <Container
             sx={{
