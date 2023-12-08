@@ -24,12 +24,12 @@ const HomePage = () => {
 
   const handleMouseDown = (e) => {
     setIsDragging(true);
-    setStartX(e.clientX - containerRef.current.scrollLeft);
+    setStartX(e.clientX + containerRef.current.scrollLeft);
   };
 
   const handleMouseMove = (e) => {
     if (!isDragging) return;
-    const scrollX = e.clientX - startX;
+    const scrollX = startX - e.clientX;
     containerRef.current.scrollLeft = scrollX;
   };
 
