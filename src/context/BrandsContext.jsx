@@ -55,6 +55,7 @@ export const BrandsProvider = ({ children }) => {
       link: "la-mere-poulard",
       bg: lamereBg,
       shorthand: "La Mère Poulard",
+      isLaunched: true,
       products: [
         {
           name: "La Mère Poulard Palets Citron - Lemon French Shortbreads",
@@ -97,6 +98,7 @@ export const BrandsProvider = ({ children }) => {
       link: "forno-bonomi",
       bg: AiremBg,
       shorthand: "Forno Bonomi",
+      isLaunched: true,
       products: [
         {
           name: "Salty Puff Pastry Minibites Tomato And Origano Flavour ",
@@ -119,7 +121,6 @@ export const BrandsProvider = ({ children }) => {
           img: forno3,
           link: "https://tradluxe.myshopify.com/collections/forno-bonomi/products/italian-shortbread-finger-150g",
         },
-        
       ],
     },
     {
@@ -133,6 +134,7 @@ export const BrandsProvider = ({ children }) => {
       link: "mesta-wine",
       bg: MestaBg,
       shorthand: "Mesta Wine",
+      isLaunched: true,
       products: [
         {
           name: "Mesta Rosado Tempranillo Organic Rose Wine from Spain",
@@ -184,6 +186,7 @@ export const BrandsProvider = ({ children }) => {
       link: "airem-organic-spirits",
       bg: AiremBg,
       shorthand: "Airem",
+      isLaunched: true,
       products: [
         {
           name: "Ultra Premium Eco-friendly Vodka Ecological, Kosher, Gluten Free",
@@ -219,6 +222,7 @@ export const BrandsProvider = ({ children }) => {
       link: "san-andres",
       bg: AiremBg,
       shorthand: "San Andres",
+      isLaunched: true,
       products: [
         {
           name: "San Andrés Nougat Almond with tropical fruits",

@@ -178,12 +178,13 @@ const HomePage = () => {
                   name={brand.name}
                   idx={idx}
                   link={brand.link}
+                  isLaunched={brand.isLaunched}
                 />
               </Box>
             ))}
 
             <Box sx={{ alignItems: "center", height: "100%", display: "flex" }}>
-              <Typography
+              {/* <Typography
                 component="h4"
                 sx={{
                   color: "#595959",
@@ -194,7 +195,7 @@ const HomePage = () => {
                 }}
               >
                 Coming Soon...
-              </Typography>
+              </Typography> */}
             </Box>
           </Container>
         </Box>

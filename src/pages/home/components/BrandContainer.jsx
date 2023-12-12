@@ -1,9 +1,10 @@
 import React from "react";
 import { Box, Typography, useMediaQuery } from "@mui/material";
 import { useNavigate } from "react-router-dom";
+import Ribbon from "../../../assets/images/ribbon.svg";
 
 // eslint-disable-next-line react/prop-types
-const BrandContainer = ({ img, logo, flag, name, idx, link }) => {
+const BrandContainer = ({ img, logo, flag, name, idx, link, isLaunched }) => {
   const navigate = useNavigate();
   const tabMatches = useMediaQuery("(min-width:900px)");
 
@@ -16,6 +17,7 @@ const BrandContainer = ({ img, logo, flag, name, idx, link }) => {
         backgroundSize: "cover",
         backgroundPosition: "center",
         cursor: "pointer",
+        position: "relative",
       }}
       id="brands"
       data-aos="zoom-in-up"
@@ -23,6 +25,14 @@ const BrandContainer = ({ img, logo, flag, name, idx, link }) => {
       data-aos-delay={`${idx * 100}`}
       onClick={() => navigate(`/products/${link}`)}
     >
+      {!isLaunched && (
+        <img
+          src={Ribbon}
+          alt="coming soon"
+          style={{ position: "absolute", top: 20, right: 0 }}
+        />
+      )}
+
       <Box
         className="brand-container brand-container--mobile"
         sx={{
