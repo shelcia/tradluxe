@@ -5,6 +5,12 @@ import Img2 from "../assets/brands/Forno-Bonomi.webp";
 import Img3 from "../assets/brands/Mesta Wine.webp";
 import Img5 from "../assets/brands/Airem-Organic-Spirits.webp";
 import Img6 from "../assets/brands/San Andres.webp";
+import Img7 from "../assets/brands/tomarchio.png"
+import Img8 from "../assets/brands/8.jpg"
+import Img9 from "../assets/brands/9.jpg"
+import Img10 from "../assets/brands/10.jpg"
+import Img11 from "../assets/brands/11.jpg"
+import Img12 from "../assets/brands/12.jpg"
 
 import Logo1 from "../assets/logo/1.webp";
 import Logo2 from "../assets/logo/2.webp";
@@ -12,6 +18,13 @@ import Logo3 from "../assets/logo/3.webp";
 // import Logo4 from "../assets/logo/4.png";
 import Logo5 from "../assets/logo/5.webp";
 import Logo6 from "../assets/logo/6.webp";
+import Logo7 from "../assets/logo/7.png";
+import Logo8 from "../assets/logo/8.png";
+import Logo9 from "../assets/logo/9.png";
+import Logo10 from "../assets/logo/10.jpg";
+import Logo11 from "../assets/logo/11.jpg";
+import Logo12 from "../assets/logo/12.webp";
+
 
 import AiremBg from "../assets/products/airem/bg.webp";
 import Airem1 from "../assets/products/airem/1.webp";
@@ -253,6 +266,84 @@ export const BrandsProvider = ({ children }) => {
           link: "https://tradluxe.myshopify.com/products/san-andres-turron-marzipan-with-candied-fruit?_pos=2&_psq=fruits&_ss=e&_v=1.0",
         },
       ],
+    },
+    {
+      name: "Tomarchio",
+      logo: Logo7,
+      image: Img7,
+      flag: "🇮🇹",
+      subline: "With Love, From Italy",
+      content:
+        "Made in France with Non-GMO ingredients. Full of flavour and buttery goodness. A bit of La Mere Poulard's product will take your tastebuds to France.",
+      link: "san-andres",
+      bg: AiremBg,
+      shorthand: "Tomarchio",
+      products: [],
+    },
+    {
+      name: "Novi Chocolates",
+      logo: Logo8,
+      image: Img8,
+      flag: "🇮🇹",
+      subline: "With Love, From Italy",
+      content:
+        "Made in France with Non-GMO ingredients. Full of flavour and buttery goodness. A bit of La Mere Poulard's product will take your tastebuds to France.",
+      link: "san-andres",
+      bg: AiremBg,
+      shorthand: "Novi Chocolates",
+      products: [],
+    },
+    {
+      name: "El Valle Chips",
+      logo: Logo9,
+      image: Img9,
+      flag: "🇪🇸",
+      subline: "With Love, From Italy",
+      content:
+        "Made in France with Non-GMO ingredients. Full of flavour and buttery goodness. A bit of La Mere Poulard's product will take your tastebuds to France.",
+      link: "san-andres",
+      bg: AiremBg,
+      shorthand: "Novi Chocolates",
+      products: [],
+    },
+    {
+      name: "Allumea Organic Wines",
+      logo: Logo10,
+      image: Img10,
+      flag: "🇮🇹",
+      subline: "With Love, From Italy",
+      content:
+        "Made in France with Non-GMO ingredients. Full of flavour and buttery goodness. A bit of La Mere Poulard's product will take your tastebuds to France.",
+      link: "san-andres",
+      bg: AiremBg,
+      shorthand: "Allumea Organic Wines",
+      products: [],
+    },
+    {
+      name: "Terre Di Faiano",
+      logo: Logo11,
+      image: Img11,
+      flag: "🇮🇹",
+      subline: "With Love, From Italy",
+      content:
+        "Made in France with Non-GMO ingredients. Full of flavour and buttery goodness. A bit of La Mere Poulard's product will take your tastebuds to France.",
+      link: "san-andres",
+      bg: AiremBg,
+      shorthand: "Terre Di Faiano",
+      products: [],
+    },
+    {
+      name: "Happyole Cocktails",
+      logo: Logo12,
+      image: Img12,
+      flag: "🇪🇸",
+      subline: "With Love, From Italy",
+      content:
+        "Made in France with Non-GMO ingredients. Full of flavour and buttery goodness. A bit of La Mere Poulard's product will take your tastebuds to France.",
+      link: "san-andres",
+      bg: AiremBg,
+      shorthand: "Happyole",
+      products: [],
     },
   ]);
 
