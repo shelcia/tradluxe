@@ -43,16 +43,19 @@ const ProductPage = () => {
 
       <Container className="page-fade">
         <Grid container spacing={1.5} sx={{ justifyContent: "center" }}>
-          {brands?.map((brand, idx) => (
-            <Grid item xs={12} md={4} key={idx} sx={{ overflow: "hidden" }}>
-              <BrandContainer
-                img={brand.image}
-                logo={brand.logo}
-                name={brand.name}
-                link={brand.link}
-              />
-            </Grid>
-          ))}
+          {brands?.map(
+            (brand, idx) =>
+              brand.isLaunched && (
+                <Grid item xs={12} md={4} key={idx} sx={{ overflow: "hidden" }}>
+                  <BrandContainer
+                    img={brand.image}
+                    logo={brand.logo}
+                    name={brand.name}
+                    link={brand.link}
+                  />
+                </Grid>
+              )
+          )}
         </Grid>
       </Container>
     </>

@@ -27,6 +27,7 @@ To add, change delete products on website go to `src/context/BrandsContext.jsx`
     link: "mesta-wine", -> change the brand link here (it has to be unique)
     bg: MestaBg,
     shorthand: "Mesta Wine", -> change the brand shorthand for breadcrumb navigation here
+    isLaunched: Boolean, true/false-> true if the product is launched on tradluxe
     products: [
         {
           name: "Mesta Rosado Tempranillo Organic Rose Wine from Spain", -> change the product name here

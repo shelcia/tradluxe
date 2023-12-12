@@ -159,8 +159,8 @@ const HomePage = () => {
             sx={{
               display: "grid",
               gridTemplateColumns: tabMatches
-                ? "repeat(12, 400px)"
-                : "repeat(12, 200px)",
+                ? "repeat(7, 400px)"
+                : "repeat(7, 200px)",
               gap: 3,
             }}
           >
@@ -178,12 +178,13 @@ const HomePage = () => {
                   name={brand.name}
                   idx={idx}
                   link={brand.link}
+                  isLaunched={brand.isLaunched}
                 />
               </Box>
             ))}
 
-            {/* <Box sx={{ alignItems: "center", height: "100%", display: "flex" }}>
-              <Typography
+            <Box sx={{ alignItems: "center", height: "100%", display: "flex" }}>
+              {/* <Typography
                 component="h4"
                 sx={{
                   color: "#595959",
@@ -194,8 +195,8 @@ const HomePage = () => {
                 }}
               >
                 Coming Soon...
-              </Typography>
-            </Box> */}
+              </Typography> */}
+            </Box>
           </Container>
         </Box>
       </Box>
