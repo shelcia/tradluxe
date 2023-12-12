@@ -159,8 +159,8 @@ const HomePage = () => {
             sx={{
               display: "grid",
               gridTemplateColumns: tabMatches
-                ? "repeat(7, 400px)"
-                : "repeat(7, 200px)",
+                ? "repeat(13, 400px)"
+                : "repeat(13, 200px)",
               gap: 3,
             }}
           >
