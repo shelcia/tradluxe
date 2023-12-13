@@ -9,7 +9,6 @@ import { CustomAboutDivider } from "../../components/CustomDividers";
 import CustomToolbar from "../../components/CustomToolbar";
 import MissionImg from "../../assets/icons/mission.svg";
 import ValuesImg from "../../assets/icons/values.svg";
-import BrandsImg from "../../assets/images/brands.svg";
 
 const AboutPage = () => {
   const tabMatches = useMediaQuery("(min-width:900px)");
@@ -250,36 +249,6 @@ const AboutPage = () => {
                 beyond their expectations.
               </Typography>
             </Box>
-          </Grid>
-        </Grid>
-        <CustomAboutDivider />
-        <Grid container spacing={6} sx={{ my: 4 }}>
-          <Grid item xs={12} md={6} sx={{ width: "100%" }}>
-            <Box sx={{ width: "100%", textAlign: "center" }}>
-              <img
-                src={BrandsImg}
-                alt="about us background"
-                width="auto"
-                height="300px"
-                loading="lazy"
-                style={{ maxWidth: "100%" }}
-              />
-            </Box>
-          </Grid>
-          <Grid item xs={12} md={6}>
-            <Typography
-              sx={{
-                fontSize: { xs: "1rem", md: "1.3rem" },
-                lineHeight: "150%",
-              }}
-            >
-              TradLuxe is a dynamic distribution company established in
-              Singapore in 2020 by a group of passionate individuals. Our
-              primary objective is to bring premium products to the discerning
-              consumers of Singapore, offering them a curated selection through
-              our website, various online marketplaces and a network of
-              speciality, handpicked retail channel partners.
-            </Typography>
           </Grid>
         </Grid>
         <CustomAboutDivider />
