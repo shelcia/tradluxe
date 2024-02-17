@@ -22,7 +22,7 @@ const BrandContainer = ({ img, logo, flag, name, idx, link, isLaunched }) => {
       id="brands"
       data-aos="zoom-in-up"
       data-aos-duration="600"
-      data-aos-delay={`${idx * 100}`}
+      data-aos-delay={`${idx * 20}`}
       onClick={() => {
         if (isLaunched) {
           navigate(`/products/${link}`);
