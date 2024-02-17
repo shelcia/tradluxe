@@ -3,6 +3,7 @@ import {
   Box,
   Container,
   IconButton,
+  Grid,
   Typography,
   useMediaQuery,
 } from "@mui/material";
@@ -121,9 +122,10 @@ const HomePage = () => {
         <CustomTitle subtitle="Discover" title="Our Brands" />
       </Box>
 
-      <Box
+      <Container
         sx={{
           position: "relative",
+          // px: 3,
           "&::after": {
             content: '""',
             position: "absolute",
@@ -131,8 +133,8 @@ const HomePage = () => {
             right: 0,
             width: tabMatches ? "15%" : "20%",
             height: "100%",
-            background:
-              "linear-gradient(90deg, transparent, #F0F0F0 90%, #F0F0F0 100%)",
+            // background:
+            //   "linear-gradient(90deg, transparent, #F0F0F0 90%, #F0F0F0 100%)",
             pointerEvents: "none",
             zIndex: 1,
           },
@@ -155,17 +157,12 @@ const HomePage = () => {
           onMouseUp={handleMouseUp}
           onMouseLeave={handleMouseLeave}
         >
-          <Container
-            sx={{
-              display: "grid",
-              gridTemplateColumns: tabMatches
-                ? "repeat(13, 400px)"
-                : "repeat(13, 200px)",
-              gap: 3,
-            }}
-          >
+          <Grid container spacing={2}>
             {brands.map((brand, idx) => (
-              <Box
+              <Grid
+                item
+                xs={12}
+                md={4}
                 key={idx}
                 sx={{ overflow: "hidden", mt: idx % 2 === 0 ? 0 : 5 }}
               >
@@ -180,32 +177,16 @@ const HomePage = () => {
                   link={brand.link}
                   isLaunched={brand.isLaunched}
                 />
-              </Box>
+              </Grid>
             ))}
-
-            <Box sx={{ alignItems: "center", height: "100%", display: "flex" }}>
-              {/* <Typography
-                component="h4"
-                sx={{
-                  color: "#595959",
-                  fontFamily: "'Playfair Display Variable', serif",
-                  fontSize: "64px",
-                  fontWeight: 400,
-                  lineHeight: "100%",
-                }}
-              >
-                Coming Soon...
-              </Typography> */}
-            </Box>
-          </Container>
+          </Grid>
         </Box>
-      </Box>
+      </Container>
 
       <Container sx={{ height: "100%" }}>
         <CustomTitle subtitle="Find us" title="Where to find us?" />
       </Container>
       <FindUs />
-      <Container>{/* <FindUs /> */}</Container>
     </>
   );
 };
